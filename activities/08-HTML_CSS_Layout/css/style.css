@@ -1,53 +1,54 @@
-
-.container {
-
-}
-
-main-bio {
-
-}
-
-contact-info {
-
-}
-
-bio-image {
-
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 150%;
+  color: #333;
+  background: #efeee7;
 }
 
 header {
-    background-color: #333333;
-    color: #eee;
-    font-size: 28px;
-    padding: 
+  background: #333;
 }
-body {
-    background-color: #efeee7;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #333333;
-  }
-* Style the example on the projector.
-  * Add a `class` called "container" on the `div` tag. For example: `<div class="container">`.
-  * Add an `id` called "main-bio" for the first `section` tag.
-  * Add an `id` called "contact-info" for the second `section` tag.
-  * Add an `id` called "bio-image" for the bio image.
-* Style specs:
 
+h1 {
+  padding: 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #eee;
+  text-align: center;
+}
 
-* `header`
-    * The background color is `#333333`.
-  * `h1`
-    * The font color is `#eee`.
-    * The font size is `28px`.
-    * Look at the example on the screen, and eyeball the padding and/or margins and positioning of the text.
-  * `h2`
-    * The font size is `24px`
-  * Make the container have a width of 1024 pixels, and center it. You do this using `margin: 0 auto;`.
-  * Make `#main-bio`, `#contact-info`, `#bio-image` all `float: left`.
-  * Make the `#bio-image` have a width of 200 pixels.
-  * Be sure to include `alt` text in all images
-  * `#main-bio` should have a width of `70%`.
-    * Add margins to the image so there is distance between it and the bio text.
-  * `#contact-info` should have a width of `30%`.
-  * Adjust the line height so it is 1.5 times the size of the font.
-  * Make the link color `#d21034`.
+h2 {
+  font-size: 24px;
+}
+
+a {
+  color: #d21034;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+#main-bio,
+#contact-info,
+#bio-image {
+  float: left;
+}
+
+#main-bio {
+  width: 70%;
+}
+
+#contact-info {
+  width: 30%;
+}
+
+#bio-image {
+  width: 250px;
+  margin-right: 20px;
+}

@@ -1,0 +1,57 @@
+/*CSS Selectors * Selects all elements */
+/*::after is a pseudo element which allows you to insert content onto a page from CSS */
+/*::before is exactly the same only it inserts the content before any other content in the HTML instead of after. */
+/*box-sizing*/
+/*The box-sizing CSS property sets how the total width and height of an element is calculated.*/
+/*border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. */
+/*If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.*/
+/**, *::after, *::before {
+  box-sizing: border-box;
+}*/
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  /*When you have specified a width on the object that you have applied margin: 0 auto to, the object will sit centrally within it's parent container.*/
+  /*The first parameter 0 indicates that the top and bottom margins will both be set to 0.*/
+  /*/*Specifying auto as the second parameter basically tells the browser to automatically determine the left and right margins itself, which it does by setting them equally. It guarantees that the left and right margins will be set to the same size. */
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 1000px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.25em;
+}
+
+header {
+  background-color: #1D88E5;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+aside {
+  background-color: #1D88E5;
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+main {
+  background-color: #1D88E5;
+  width: 700px;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+footer {
+  background-color: #1D88E5;
+  width: 1000px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid white;
+}

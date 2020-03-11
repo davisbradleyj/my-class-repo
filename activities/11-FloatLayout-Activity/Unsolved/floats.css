@@ -14,6 +14,8 @@
 }
 
 body {
+  font-size: 30px;
+  color: white;
 }
 
 header {
@@ -30,30 +32,32 @@ section {
 
 #left {
   background: #30948d;
-  width: 33%;
+  width: 33.3333%;
   float: left;
 }
 
 #middle {
   background: #9E1212;
-  width: 33%;
+  width: 33.3333%;
   float: left;
 }
 
 #right {
   background: #30948d;
-  width: 33%;
+  width: 33.3333%;
   float: left;
 }
 
 #full {
   background: #394549;
   padding: 40px;
+  height: 225px;
 }
 
 #division {
   background: #6ea3da;
   padding: 20px;
+  overflow: visible;
 }
 
 aside {
@@ -61,6 +65,10 @@ aside {
   margin-left: 20px;
   width: 300px;
   height: 150px;
+  border-color: white;
+  border-style: solid;
+  line-height: 75px;
+  position: absolute;
 }
 
 footer {

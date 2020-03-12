@@ -12,7 +12,33 @@
 .main {
   height: 100vh;
   width: 100%;
-  /* rgb stands for red, green, blue using a combination of these three colors, you can make ANY color. Play around with th numbers a little bit! */
-  background-color: rgb(233, 56, 25);
+  background-color: blue;
   position: relative;
+}
+
+.box-1 {
+  height: 100px;
+  width: 100px;
+  background-color: green;;
+}
+
+.box-2 {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  color: white;
+
+}
+.box-3 {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
+
+.box-4 {
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+
+
 }

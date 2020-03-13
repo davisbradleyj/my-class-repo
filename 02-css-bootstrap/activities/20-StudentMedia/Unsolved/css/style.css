@@ -65,7 +65,7 @@ body {
   }
 
   /* The wrapper's width will be 600px */
-  .wrapper {
+  .wrapper {;
     width: 600px;
   }
 }

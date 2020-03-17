@@ -1,18 +1,21 @@
 // declare a variable named farm
-
+var farm;
 
 
 // set that farm variable to be an array with the elements
 // Pig, Cow, Chicken, Dog, Horse, Sheep
 
-
+farm = ["Pig", "Cow", "Chicken", "Dog", "Horse", "Sheep"]
 
 // write an if statement that creates an alert that says "RWAR!" if the first element of farm is not "godzilla"
 
-
-
+if (farm[0] !== "Godzilla") {
+    alert("RWAR!")
+}
 // write another if statement that creates an alert "SCREECH!" if the last element of farm is "mothra"
-
+if (farm[farm.length - 1] === "Mothra") {
+    alert("SCREECH!")
+}
 
 
 // declare a variable named dog with a value of "Spot"

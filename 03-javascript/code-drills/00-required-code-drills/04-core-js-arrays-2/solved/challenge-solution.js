@@ -48,7 +48,7 @@ for (var i = 0; i < numArray.length; i++) {
   if (numArray[i] > 50) {
     console.log(numArray[i]);
   }
-}
+
 
 
 // iterate through numArray and create an alert that tells us 

@@ -29,7 +29,7 @@ var characterOneProfession = "Web Developer";
 
 // make a variable called `characterOneSpecies` and assign it a value of "cat"
 
-var characterOneSpecies = "cat;"
+var characterOneSpecies = "cat"
 
 // make a variable called `characterOneLocation` and assign it a value of "San Francisco, CA"
 
@@ -109,13 +109,13 @@ if (characterOneName === "Mr. Farley");{
 
     // If it does, console log "hello Mr. Farley"
     console.log ("hello Mr. Farley");
-}    
+}   
 // Else, check if `characterOneName` is "Ms.Farley"
-else (characterOneName === "Ms. Farley"); {
+else if (characterOneName === "Ms. Farley"); {
 
     // If it does, console log "hello Ms. Farley"
     console.log ("hello Ms. Farley")
-}    
+};  
 // Else, we know if the code reaches this point that `characterOneName` is neither "Mr. Farley" nor "Ms. Farley"
 else {
 

@@ -1,0 +1,1 @@
+var arts = document.getElementById("articles").querySelectorAll(".article")

@@ -17,9 +17,15 @@
     //MAKE YOUR BROWSER SING 99 BOTTLES OF BEER!
 
     // =================== YOUR WORK HERE ===================
-    
-
-
+    (function beer() {
+      for (var i = 99; i > 0; i--){
+        if (i > 1){
+          document.write(`${i} bottles of beer on the wall, ${i} bottles of beer. Pass one down, pass it around, ${i-1} bottles of beers on the wall!`)
+        } else {
+          document.write("1 bottle of beer on the wall, 1 bottle of beer. Pass one down, pass it around... Shit.. we're all outta beers!")
+        }
+      }
+    })()
 
 
     // =================== END WORK AREA ===================

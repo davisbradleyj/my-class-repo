@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+​
+    <script type="text/javascript">
+        // Array of Choices
+        var choice= ["rock", "paper", "scissors"];
+        var computerScore = 0;
+        var userScore = 0;
+        var tieScore = 0;
+        alert("Wanna play a game?");
+​
+    for(var i=0; i < 10; i++){
+        var userChoice = prompt("Choose rock, paper, or scissors");
+        var userChoiceLower = userChoice.toLowerCase();
+        var randomNumber = Math.floor(Math.random()*3);
+        var computerChoice = choice[randomNumber];
+        // Log Results if choice is valid
+        if (userChoiceLower === "rock" || userChoiceLower === "scissors" || userChoiceLower === "paper") {
+            console.log(userChoiceLower);
+            console.log(computerChoice);
+        }
+​
+        else {
+            alert("Invalid choice. Please refresh the page and choose again");
+        }
+​
+        if (userChoiceLower === "rock"){
+​
+            if(computerChoice === "rock"){
+                alert("Tie Game");
+                console.log("Tie");
+                tieScore++;
+                console.log(tieScore);
+            }
+​
+            else if(computerChoice === "paper"){
+                alert("Computer Wins");
+                console.log("Computer Wins");
+                computerScore++;
+                console.log(computerScore);
+            }
+​
+            else if(computerChoice === "scissors"){
+                alert("User Wins");
+                console.log("User Wins");
+                userScore++;
+                console.log(userScore);
+            }
+        }
+​
+        if (userChoiceLower === "paper"){
+​
+            if(computerChoice === "paper"){
+                alert("Tie Game");
+                console.log("Tie");
+                tieScore++;
+                console.log(tieScore);
+            }
+​
+            else if(computerChoice === "scissors"){
+                alert("Computer Wins");
+                console.log("Computer Wins");
+                computerScore++;
+                console.log(computerScore);
+            }
+​
+            else if(computerChoice === "rock"){
+                alert("User Wins");
+                console.log("User Wins");
+                userScore++;
+                console.log(userScore);
+            }
+        }
+​
+        if (userChoiceLower === "scissors"){
+​
+            if(computerChoice === "scissors"){
+                alert("Tie Game");
+                console.log("Tie");
+                tieScore++;
+                console.log(tieScore);
+            }
+​
+            else if(computerChoice === "rock"){
+                alert("Computer Wins");
+                console.log("Computer Wins");
+                computerScore++;
+                console.log(computerScore);
+            }
+​
+            else if(computerChoice === "paper"){
+                alert("User Wins");
+                console.log("User Wins");
+                userScore++;
+                console.log(userScore);
+            }
+        }
+​
+        alert("Computer Score: " + computerScore + "\nUser Score: " + userScore + "\nTies: " + tieScore)
+    }
+​
+    document.write("GAME OVER")
+    
+    </script>
+​
+​
+    
+</body>
+</html>

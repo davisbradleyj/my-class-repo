@@ -4,7 +4,6 @@ var userExpression = [];
 // create a string of all the valid inputs for our validation logic to check against
 var validInputs = "1234567890+-*/=c";
 
-
 // ==================== Evaluation Function ====================
 //
 // create function that takes in an array and evaluates that array as a mathematical function
@@ -23,12 +22,10 @@ function evaluateArray(arr) {
   // iterate through the array from the argument
   for (var i = 0; i < arr.length; i++) {
 
-
     // if the operator is already defined
     // not being defined is a "falsey" value and will evaluate to false in the if statement
     // if operator has a value, it will evaluate to true
     if (operator) {
-
 
       // append the current element to the end of the second number
       num2 = num2 + arr[i];
@@ -52,7 +49,6 @@ function evaluateArray(arr) {
     }
   }
 
-  
   
   // after we've iterated through the array, parse the first and 
   // second numbers into integers from strings

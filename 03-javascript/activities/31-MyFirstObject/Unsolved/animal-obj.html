@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+    <script>
+
+      var animal = {
+        species: "Mammal",
+        type: "canine",
+        breed: "husky",
+        age: 8,
+        isAlive: true,
+
+        walkToPark: function() {
+
+          alert("This " + this.breed + " is getting walked to the park.");;
+        },
+
+        itsMyBirthday: function() {
+          this.age = this.age + 1;
+          alert("This " + this.breed + " is turning " + this.age);
+        },
+
+      };
+
+
+      // How would we log...
+
+      // The car's make?
+      console.log(animal.species)
+      // The car's model?
+      console.log(animal.type)
+      // The car's mileage?
+      console.log(animal.isAlive)
+      // How would we run the animal's walkToPark method?
+      animal.walkToPark()
+      // How would we run the car's driveAroundWorld method?
+      animal.itsMyBirthday()
+      
+    </script>
+    
+  </body>
+</html>

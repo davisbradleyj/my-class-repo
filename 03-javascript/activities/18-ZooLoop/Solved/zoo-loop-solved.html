@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+
+      // Array of zoo animals.
+      var zooAnimals = ["Zebra", "Rhino", "Giraffe", "Owl"];
+
+      // Loops through the array to print each zoo animal.
+      for (var i = 0; i < zooAnimals.length; i++) {
+        // Logs the animal at index position i to the console. This code is executed each we go through the loop.
+        console.log(zooAnimals[i]);
+      }
+      console.log("*****");
+
+
+
+
+
+
+       for (var i = zooAnimals.length -1; i >= 0; i--) {
+        // Logs the animal at index position i to the console. This code is executed each we go through the loop.
+        console.log(zooAnimals[i]);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+      console.log("*****");
+
+      // We can also do this with a function.
+      function logArray(list) {
+        for (var baba = 0; baba < list.length; baba++) {
+          console.log(list[baba]);
+        }
+      }
+
+      // Produces the same result as the raw loop above.
+      logArray(zooAnimals);
+
+      console.log("*****");
+      var myBands = ["britney", "selena", "bob dylan", "blink 182", "michael jackson", "hanson", "neutral milk hotel", "gwar", "adele"];
+
+      logArray(myBands);
+
+
+    </script>
+
+  </body>
+</html>

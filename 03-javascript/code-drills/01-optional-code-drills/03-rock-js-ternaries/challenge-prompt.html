@@ -19,15 +19,11 @@ var bool = false;
 function fun(arg) {
 
   //Your answer in the console.log()
-  console.log();
+  console.log(arg ? "Yea, it's true" : "Nah, it's false");
 }
 
 fun(bool) 
-
-
 // ==============================================================
-
-
 
 // ========================= QUESTION 2 =========================
 // Create a variable called likesBasketball, and set it to true or false depending on your preference. 
@@ -35,13 +31,25 @@ fun(bool)
 // If the argument is true, console.log("Welcome to the Warriors"). If it is false, console.log("It's ok, there's always code :)").
 //Call your canYouBall function, passing in the likesBasketball variable (if you're having trouble remembering what this means, refer to line 25 above). 
 
+var likesBasketball = false;
+
+function youCanBall(ball) {
+  console.log(ball ? "Welcome to the Warriors" : "It's ok, there's always code :)");
+}
+
+youCanBall(likesBasketball)
 // ==============================================================
 
  
 // ========================= QUESTION 3 =========================
 // In this exercise, make a function which takes in an argument (very similar to the past two questions). If the argument is true, console.log("I exist"). If the argument is false, console.log("Nobody's home").
+var whosThere = true
 
+function anybodyThere(you) {
+  console.log(you ? "I exist" : "Nobody's home")
 
+}
+anybodyThere(whosThere)
 // ==============================================================
 
 
@@ -49,7 +57,8 @@ fun(bool)
 var personOne = "Asher"
 var personTwo;
 // Call the function you made in question 3 twice. In the first instance, pass in personOne. In the second instance, pass in personTwo.
-
+anybodyThere(personOne) //I exist
+anybodyThere(personTwo) //Nobody's Home
 // Comment out what you expect to see in the console from each function. Then, compare your guess to the actual console.log in the browser. 
 
 // ==============================================================
@@ -62,7 +71,10 @@ var two = 2;
 var three = 3;
 
 // Call the function you made in question 3 four times. In each instance, pass in a different one of the four given variables.
-
+anybodyThere(zero) //Nobody's Home
+anybodyThere(one) //I exist
+anybodyThere(two) //I exist
+anybodyThere(three) //I exist
 // Comment out what you expect to see in the console from each function. Then, compare your guess to the actual console.log in the browser. 
 
 

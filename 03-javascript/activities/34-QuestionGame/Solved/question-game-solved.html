@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Question Game</title>
+</head>
+
+<body>
+
+  <script>
+
+    // The array of questions for our quiz game.
+    // var questions = [
+    //   { q: "The sky is blue.", a: "t" },
+    //   { q: "There are 365 days in a year.", a: "t" },
+    //   { q: "There are 42 ounces in a pound.", a: "f" },
+    //   { q: "The Declaration of Independence was created in 1745.", a: "f" },
+    //   { q: "Bananas are vegetables.", a: "f" }
+    // ];
+
+    // // We start the game with a score of 0.
+    // var score = 0;
+
+    // // Loop over every question object
+    // for (var i = 0; i < questions.length; i++) {
+    //   // Display current question to user and ask OK/Cancel
+    //   var answer = confirm(questions[i].q);
+
+    //   // Compare answers
+    //   if ((answer === true && questions[i].a === "t") ||
+    //     (answer === false && questions[i].a === "f")) {
+    //     // Increase score
+    //     score++;
+    //     alert("Correct!");
+    //   }
+    //   else {
+    //     alert("Wrong!");
+    //   }
+    // }
+
+    // // Show total at end
+    // alert("You got " + score + "/" + questions.length);
+
+
+    // ------------------
+    // ------------------
+    // ------------------
+
+
+    // We start the game with a score of 0.
+    var gameScore = 0;
+    var questionNumber = 0;
+    var questions = [
+      { q: "The sky is blue.", a: "t" },
+      { q: "There are 365 days in a year.", a: "t" },
+      { q: "There are 42 ounces in a pound.", a: "f" },
+      { q: "The Declaration of Independence was created in 1745.", a: "f" },
+      { q: "Bananas are vegetables.", a: "f" }
+    ];
+
+function playGame (){
+  if(questionNumber > questions.length -1){
+    gameOver()
+  }else{
+    askQuestion();
+  }
+  
+}
+
+function askQuestion(){
+   
+    var answer = confirm(questions[questionNumber].q);
+
+    checkAnswer(answer);
+}
+
+function checkAnswer(answer){
+  if ((answer === true && questions[questionNumber].a === "t") ||
+      (answer === false && questions[questionNumber].a === "f")) {
+      // Increase score
+      gameScore++;
+      alert("Correct! " + gameScore + "/" + questions.length);
+    }
+    else {
+      alert("Wrong! " + gameScore + "/" + questions.length);
+    }
+
+    questionNumber++
+    playGame ()
+}
+    
+  function gameOver(){
+    alert("You got " + gameScore + "/" + questions.length + "\nGame Over");
+  }
+
+playGame ()
+
+  </script>
+
+</body>
+
+</html>

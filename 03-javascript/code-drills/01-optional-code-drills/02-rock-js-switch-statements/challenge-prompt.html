@@ -24,86 +24,166 @@
       increment++;
       document.getElementById("num").innerHTML = increment;
       checkNum()
-    };
+    };   
 
     //TO DO:   Convert these conditional statments into a switch/case
+    // function checkNum() {
+    //   if (increment === 1) {
+    //     document.getElementById("message").innerHTML = "Hi."
+    //   } else if (increment === 2) {
+    //     document.getElementById("message").innerHTML = "My"
+
+    //   } else if (increment === 3) {
+    //     document.getElementById("message").innerHTML = "Name"
+
+    //   } else if (increment === 4) {
+    //     document.getElementById("message").innerHTML = "Is"
+
+    //   } else if (increment === 5) {
+    //     document.getElementById("message").innerHTML = "Farley."
+
+    //   } else if (increment === 6) {
+    //     document.getElementById("message").innerHTML = "I"
+
+    //   } else if (increment === 7) {
+    //     document.getElementById("message").innerHTML = "Am"
+
+    //   } else if (increment === 8) {
+    //     document.getElementById("message").innerHTML = "A"
+
+    //   } else if (increment === 9) {
+    //     document.getElementById("message").innerHTML = "Ferocious"
+
+    //   } else if (increment === 10) {
+    //     document.getElementById("message").innerHTML = "Feline"
+
+    //   } else if (increment === 11) {
+    //     document.getElementById("message").innerHTML = "Hailing"
+
+    //   } else if (increment === 12) {
+    //     document.getElementById("message").innerHTML = "From"
+
+    //   } else if (increment === 13) {
+    //     document.getElementById("message").innerHTML = "Mysterious"
+
+    //   } else if (increment === 14) {
+    //     document.getElementById("message").innerHTML = "Lands."
+
+    //   } else if (increment === 15) {
+    //     document.getElementById("message").innerHTML = "You"
+
+    //   } else if (increment === 16) {
+    //     document.getElementById("message").innerHTML = "Should"
+
+    //   } else if (increment === 17) {
+    //     document.getElementById("message").innerHTML = "Not"
+
+    //   } else if (increment === 18) {
+    //     document.getElementById("message").innerHTML = "Mess"
+
+    //   } else if (increment === 19) {
+    //     document.getElementById("message").innerHTML = "With"
+
+    //   } else if (increment === 20) {
+    //     document.getElementById("message").innerHTML = "Me."
+
+    //   }
+    // }
+
+
+
+
     function checkNum() {
-      if (increment === 1) {
-        document.getElementById("message").innerHTML = "Hi."
-      } else if (increment === 2) {
-        document.getElementById("message").innerHTML = "My"
-
-      } else if (increment === 3) {
-        document.getElementById("message").innerHTML = "Name"
-
-      } else if (increment === 4) {
-        document.getElementById("message").innerHTML = "Is"
-
-      } else if (increment === 5) {
-        document.getElementById("message").innerHTML = "Farley."
-
-      } else if (increment === 6) {
-        document.getElementById("message").innerHTML = "I"
-
-      } else if (increment === 7) {
-        document.getElementById("message").innerHTML = "Am"
-
-      } else if (increment === 8) {
-        document.getElementById("message").innerHTML = "A"
-
-      } else if (increment === 9) {
-        document.getElementById("message").innerHTML = "Ferocious"
-
-      } else if (increment === 10) {
-        document.getElementById("message").innerHTML = "Feline"
-
-      } else if (increment === 11) {
-        document.getElementById("message").innerHTML = "Hailing"
-
-      } else if (increment === 12) {
-        document.getElementById("message").innerHTML = "From"
-
-      } else if (increment === 13) {
-        document.getElementById("message").innerHTML = "Mysterious"
-
-      } else if (increment === 14) {
-        document.getElementById("message").innerHTML = "Lands."
-
-      } else if (increment === 15) {
-        document.getElementById("message").innerHTML = "You"
-
-      } else if (increment === 16) {
-        document.getElementById("message").innerHTML = "Should"
-
-      } else if (increment === 17) {
-        document.getElementById("message").innerHTML = "Not"
-
-      } else if (increment === 18) {
-        document.getElementById("message").innerHTML = "Mess"
-
-      } else if (increment === 19) {
-        document.getElementById("message").innerHTML = "With"
-
-      } else if (increment === 20) {
-        document.getElementById("message").innerHTML = "Me."
-
-      }
-    }
-
-
-    // ===================================== YOUR WORK HERE ===================================
-
-
-      switch (increment) {
+      
+      switch (increment) {  
         case 1:
           document.getElementById("message").innerHTML = "Hi."
           break;
 
+        case 2:
+          document.getElementById("message").innerHTML = "My"
+          break;
 
+        case 3:
+          document.getElementById("message").innerHTML = "name"
+          break;
 
+        case 4:
+          document.getElementById("message").innerHTML = "is"
+          break;
+
+        case 5:
+          document.getElementById("message").innerHTML = "Farley."
+          break;
+
+        case 6:
+          document.getElementById("message").innerHTML = "I"
+          break;
+        
+        case 7:
+          document.getElementById("message").innerHTML = "am"
+          break;
+
+        case 8:
+          document.getElementById("message").innerHTML = "a"
+          break;
+          
+        case 9:
+          document.getElementById("message").innerHTML = "ferocious"
+          break;
+
+        case 10:
+          document.getElementById("message").innerHTML = "feline"
+          break;
+        
+        case 11:
+          document.getElementById("message").innerHTML = "hailing"
+          break;
+
+        case 12:
+          document.getElementById("message").innerHTML = "from"
+          break;
+
+        case 13:
+          document.getElementById("message").innerHTML = "mysterious"
+          break;
+
+        case 14:
+          document.getElementById("message").innerHTML = "lands."
+          break;
+
+        case 15:
+          document.getElementById("message").innerHTML = "You"
+          break;
+
+        case 16:
+          document.getElementById("message").innerHTML = "should"
+          break;
+
+        case 17:
+          document.getElementById("message").innerHTML = "not"
+          break;
+
+        case 18:
+          document.getElementById("message").innerHTML = "mess"
+          break;
+
+        case 19:
+          document.getElementById("message").innerHTML = "with"
+          break;
+
+        case 20:
+          document.getElementById("message").innerHTML = "me."
+          break;
+
+        default:
+          document.getElementById("message").innerHTML = "Farley has nothing left to say."
+          break;
 
       }
-    // ========================================================================================
+    }
+
+    
   </script>
 </body>
 

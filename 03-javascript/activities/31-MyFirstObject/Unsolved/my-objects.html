@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+    <script>
+
+      var brad = {
+        birthday: "December 28",
+        siblings: "Jourdan",
+        age: 37,
+        favGames: "NHL '95","Madden '95","Tecmo Super Bowl","Contra"
+        favBand: "Goo Goo Dolls",
+        typePhone: "iPhone",
+        favCuisine: "indian",
+        car: "Infiniti",
+        favTeam: "49ers",
+        partnerName: "Alison",
+        
+
+        itsMyBirthday: function() {
+            alert("Today is " + this.birthday);
+            this.age = this.age + 1;
+            alert("I am turning " + this.age + " today!");
+        },
+
+        
+      };
+
+
+
+      brad.itsMyBirthday()
+      
+    </script>
+    
+  </body>
+</html>

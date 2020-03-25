@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New This</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <h1>Open the console to see the action!</h1>
+
+  <script>
+
+  // Here we are given a cob-web of items. Let's dig in and grab the items we need.
+  var theCobWeb = {
+    biggestWeb: {
+      item: "comb",
+      biggerWeb: {
+        items: ["glasses", "paperclip", "bubblegum"],
+        smallerWeb: {
+          item: "toothbrush",
+          tinyWeb: {
+            dogs:[]
+            items: ["toenails", "lint", "wrapper", "homework"]
+          }
+        }
+      },
+      otherBigWeb: {
+        item: "headphones"
+      }
+    }
+  };
+
+  console.log(theCobWeb.biggestWeb.item)
+
+// Create the code necessary to print each of the following lines using the object above:
+// "I found my glasses!"
+  console.log("I found my " + theCobWeb.biggestWeb.biggerWeb.items[0]);
+// "I found my toothbrush!"
+  console.log("I found my " + theCobWeb.biggestWeb.biggerWeb.smallerWeb.item);
+// "I found my headphones!"
+  console.log("I found my " + theCobWeb.biggestWeb.otherBigWeb.item);
+// "I found my homework!"
+  console.log("I found my " + theCobWeb.biggestWeb.biggerWeb.smallerWeb.tinyWeb.items[3]);
+
+
+
+</script>
+
+</body>
+</html>

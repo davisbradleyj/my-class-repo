@@ -39,7 +39,18 @@
       function displayMovieInfo() {
 
         // YOUR CODE GOES HERE!!! HINT: You will need to create a new div to hold the JSON.
+        var newDiv = $("<div>")
+        newDiv.attr("id", "movie-info")
+        $.ajax({
+          url:queryURL,
+          method: "GET"
+        }).then(function(response){
+        var data = JSON.stringify(response)
+        console.log(data)
+        })
 
+        newDiv.text(data)
+        $(.)
       }
 
       // Function for displaying movie data

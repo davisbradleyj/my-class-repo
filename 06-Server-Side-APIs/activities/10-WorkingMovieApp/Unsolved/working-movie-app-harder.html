@@ -49,11 +49,39 @@
           url: queryURL,
           method: "GET"
         }).then(function(response) {
-
-          // YOUR CODE GOES HERE!!!
-
+          // Stringify response
+          // var data = JSON.stringify(response);
+          console.log(response);
+          var title = response.Title;
+          var releaseDate = response.Released;
+          var rating = response.Rated;
+          var plot = response.Plot;
+          var poster = response.Poster;
+          // Title header
+          var header = $("<h3>");
+          header.text(title);
+          // Rating
+          var ratingDiv = $("<div>");
+          ratingDiv.text("Rating: " + rating);
+          // Release Date
+          var releaseDiv = $("<div>");
+          releaseDiv.text("Release Date: " + releaseDate);
+          // Plot
+          var plotDiv = $("<div>");
+          plotDiv.text("Plot: " + plot);
+          // Poster
+          var posterIMG = $("<img>");
+          posterIMG.attr("src", poster);
+          // Movie div
+          var movieDiv = $("<div>");
+          movieDiv.append(header);
+          movieDiv.append(ratingDiv);
+          movieDiv.append(releaseDiv);
+          movieDiv.append(plotDiv);
+          movieDiv.append(posterIMG);
+          // Append Movie Div to page
+          $("#movies-view").prepend(movieDiv);
         });
-
       }
 
       // Function for displaying movie data

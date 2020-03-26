@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bands In Town</title>
+</head>
+
+<body>
+
+  <!-- Artist Select Box -->
+  <form id="artist-form">
+
+    <!-- Label for Text Box -->
+    <label for="artist-input">Choose Your Artist</label>
+
+    <!-- Text Input Box -->
+    <input type="text" id="artist-input"><br>
+
+    <!-- Submit Button -->
+    <input id="select-artist" type="submit" value="GO!">
+  </form>
+
+  <!-- Artist Information -->
+  <div id="artist-div"></div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  function searchBandsInTown(artist) {
+
+    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=codingbootcamp";
+    // Add code to query the bands in town api searching for the artist received as an argument to this function
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function (response) {
+      console.log(response)
+      $("artist-div").empty()
+      // Using jQuery, append the following to the #artist-div :
+      // The artist's name
+    var artName = $("<h1>").text(response.name);
+    console.log(artName)
+      // The artists thumbnail image
+    var artThumb = $("<img>").attr(response.thumb_url)
+    console.log(artThumb)
+      // The number of fans tracking this artist
+    var numFans = $("<p>").text("Being tracked by " + response.tracker_count + " fans")
+    console.log(numFans)
+      // The number of upcoming events for this artist
+    var upEvents = $("<p>").text(response.upcoming_event_count + " upcoming shows")
+    console.log(upEvents)
+      // A link to the bandsintown url for this artist
+    var bitUrl = $("<a>").attr(response.url)
+    console.log(bitUrl)
+      // Note: Append actual HTML elements, not just text
+    $("<artist-div>").append(artName, artThumb, numFans, upEvents, bitUrl)    
+
+    })
+  }
+  // Event handler for user clicking the select-artist button
+  $("#select-artist").on("click", function (event) {
+      // Preventing the button from trying to submit the form
+      event.preventDefault();
+      // Storing the artist name
+      var artist = $("#artist-input").val().trim();
+
+      // Running the searchBandsInTown function (passing in the artist as an argument)
+      searchBandsInTown(artist);
+    });
+
+</script>
+
+</html>

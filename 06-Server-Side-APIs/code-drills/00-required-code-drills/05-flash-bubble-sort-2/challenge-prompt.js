@@ -9,18 +9,23 @@
 
 function bubbleSortTwo(arr) {
     // ================= code goes here ===========================
+    var swap = true
+    while (swap) {
+        swap = false;
+         for (var i=0; i<(arr.length-1); i++) {
+            if (arr[i]<arr[i+1]) {
+                var copyNum = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = copyNum;
+                swap = true;
+            }
+        }
+    }   
+    return arr
 
-    
 
 
 
-
-
-
-
-
-
-    
     // ============================================================
 }
 

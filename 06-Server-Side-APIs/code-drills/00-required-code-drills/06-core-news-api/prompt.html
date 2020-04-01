@@ -72,14 +72,14 @@
 
 
     // STEP 4: Based on your research of this API, assign a value to queryURL you think is appropriate to retrieve the top news stories in the US. 
-    var queryURL = "";
-
-
+    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'country=us&' + 'apiKey=fee4776affce4f0fa44e7bca791fbb01';
+        
     $.ajax({
       url: queryURL, 
       method: "GET"
     }).then(function (response) {
-      
+      console.log(response.articles)
+      var arts = response.articles
       // STEP 5. This is where we'll render our responses to the DOM. 
       
         // Because we want to render multiple responses, we will need to use a loop. 
@@ -100,8 +100,12 @@
         // The title of each article should go in the h3 with the class of title
         // The author of each article should go in the p tag with the class of author
         // The description of the article should go in the p tag with the class of desc
-
-
+          for (var n=0; n<arts.length; n++) {
+            if (!arts[n].author){
+              arts[n].author = "Brad Davis"
+            }
+            $(".appendMe").append('<div><h3 class="title">'+ arts[n].title + '</h3> <p class="author">' + arts[n].author + '</p> <p class="desc">' + arts[n].description + '</p> <hr></div>')
+          }
 
 
       // Step 6. By now, you should have been able to render all of the articles to the news div.

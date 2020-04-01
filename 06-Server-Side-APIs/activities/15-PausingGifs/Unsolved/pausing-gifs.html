@@ -24,7 +24,8 @@
 
       // ============== FILL IN CODE HERE FOR STEP TWO =========================
 
-      // CODE GOES HERE
+      var state = $(this).attr("data-state")
+      console.log(state)
 
       // =============================================
 
@@ -35,8 +36,15 @@
       // If state is equal to 'animate', then update the src attribute of this
       // image to it's data-still value and update the data-state attribute to 'still'
       // ============== FILL IN CODE HERE FOR STEP THREE =========================
+      if (state === "still") {
+        $(this).attr("data-state", "animate");
+        $(this).attr("src", $(this).attr("data-animate"));
+      } else {
+        $(this).attr("data-state", "sill");
+        $(this).attr("src", $(this).attr("data-still"));
 
-      // CODE GOES HERE
+      }
+     
 
       // ==============================================
 

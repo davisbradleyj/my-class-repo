@@ -2,7 +2,6 @@
 
 In this activity, you will initialize your first Node project using `npm` and install (and save) the `inquirer` package.
 
-
 ## Instructions
 
 * From the command line, run `npm init`. 
@@ -27,9 +26,7 @@ In this activity, you will initialize your first Node project using `npm` and in
 
     * license
     
-
 * Once your `package.json` file is created, run `npm install inquirer --save` to install our dependency.  
-
 
 ## Bonus
 

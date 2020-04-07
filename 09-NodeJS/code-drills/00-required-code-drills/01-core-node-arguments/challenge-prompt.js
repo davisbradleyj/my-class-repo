@@ -1,4 +1,8 @@
 
+// var arr = ["1","2","3"]
+// for (var i = 0; i<arr.length;i++) {
+//     console.log(arr[i]);
+// }
 
 
 /////////////////////////////5.1///////////////////////////////////////////
@@ -7,7 +11,7 @@
 
 // ---------- code starts here ----------
 
-
+// console.log("hello world")
 
 
 
@@ -20,10 +24,6 @@
 // ---------- code starts here ---------- 
 
 
-
-
-
-
 // ---------- code ends here ---------- 
 
 /////////////////////////////5.3///////////////////////////////////////////
@@ -32,8 +32,8 @@
 // if there is no input it should come back undefined
 
 // ---------- code starts here ---------- 
-
-
+// var arr = process.argv[4]
+//     console.log(arr)
 
 
 
@@ -47,11 +47,12 @@
 // For any other command line arguments, console log "Minion RAGE!"
 
 // ---------- code starts here ---------- 
-
-
-
-
-
-
+if (process.argv[2] === "minion" && process.argv[3] === "army") {
+    console.log("I have found Gru");
+} else if (process.argv[2] === "minion" && process.argv[3] !== "army") {
+    console.log("Still looking for Gru")
+} else {
+    console.log("Minion RAGE!")
+} 
 
 // ---------- code ends here ---------- 

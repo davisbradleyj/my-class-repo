@@ -14,5 +14,9 @@
     "Fun"
   ],
   "author": "Farley",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "badmath": "^1.0.1",
+    "inquirer": "^7.1.0"
+  }
 }

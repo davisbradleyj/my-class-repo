@@ -1,6 +1,6 @@
 # Mini Project
 
-In this activity you will build a command line tool that generates and HTML portfolio page from user input.
+In this activity you will build a command line tool that generates an HTML portfolio page from user input.
 
 ## Instructions
 

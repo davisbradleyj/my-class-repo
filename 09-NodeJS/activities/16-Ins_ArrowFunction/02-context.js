@@ -6,7 +6,9 @@ var person = {
   name: "Hodor",
   saySomething: function() {
     console.log(this.name + " is thinking...");
+    // var that = this;
     setTimeout(function() {
+      // console.log(that.name + "!");
       console.log(this.name + "!");
     }, 100);
   }

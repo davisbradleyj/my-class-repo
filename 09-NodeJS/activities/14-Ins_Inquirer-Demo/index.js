@@ -3,8 +3,8 @@ var inquirer = require("inquirer");
 inquirer
   .prompt([
     {
-      type: "input",
-      message: "What is your user name?",
+      type: "list",
+      message: "Would you like to play?",
       name: "username"
     },
     {

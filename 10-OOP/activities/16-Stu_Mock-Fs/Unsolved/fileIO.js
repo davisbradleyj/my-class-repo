@@ -10,5 +10,10 @@ FileIO.prototype.write = function(path, data) {
   return fs.writeFileSync(path, data);
 };
 
+FileIO.prototype.write = function(file, data) {
+  return fs.writeFileSync(path, data);
+};
+
+
 module.exports = FileIO;
 

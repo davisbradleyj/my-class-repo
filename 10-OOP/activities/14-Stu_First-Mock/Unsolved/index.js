@@ -3,7 +3,7 @@ const DayCare = require("./dayCare");
 
 const child1 = new Child("Tammer", 3);
 const child2 = new Child("Alec", 1);
-const child3 = new Child("Lisa", 2);
+const child3 = new Child("Lisa", 4);
 
 const dayCare = new DayCare();
 

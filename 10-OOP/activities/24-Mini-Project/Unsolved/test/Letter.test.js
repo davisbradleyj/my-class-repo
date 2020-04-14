@@ -1,4 +1,4 @@
-const Letter = require("../lib/Letter");
+const Letter = require("../lib/letter");
 
 describe("Letter class", () => {
   it("Characters that aren't digits or letters are instantly visible", () => {

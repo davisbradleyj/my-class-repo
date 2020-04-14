@@ -1,10 +1,11 @@
 const Arithmetic = require("../arithmetic");
-
+// describe is similar to the function in usual JS, defines logic process for an object
 describe("Arithmetic", () => {
   //nest as many describes as you wish (flex)
   describe("Initialization", () => {
-    //it blocks should be nested inside describe (not nested within other "it")
+    //it blocks should be nested inside describe (not nested within other "it"), the expectation of a successful test
     it("should return an object containing a 'number' property when called with the 'new' keyword", () => {
+      //create new object of type: Arithmetic(function from Arith.js)
       const obj = new Arithmetic();
       //expect is your assertion/expectation being tested
       expect("number" in obj).toEqual(true);
@@ -73,3 +74,34 @@ describe("Arithmetic", () => {
     });
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe ("product", () => {
+  it("should return a new Arith object", () => {
+    const obj = new Arithmetic(3).product(9);
+    expect(obj instanceof Arithmetic).toEqual(true);
+  });
+  it("should blah prod blach ")
+})

@@ -19,7 +19,6 @@ function start() {
   console.log("Welcome to the Quote Library!\n");
   mainMenu();
 }
-
 // define a function that displays the main menu
 function mainMenu() {
   // prompt the user to choose between three options
@@ -50,7 +49,6 @@ function mainMenu() {
 
 // define a function that will show the user all the quotes to choose from
 function showQuotes() {
-
   // create a new array of all the authors of the quotes to use for the user prompt
   var authorChoices = [];
   for (var i=0; i<quotes.length; i++) {
@@ -72,7 +70,6 @@ function showQuotes() {
     mainMenu();
   })
 }
-
 // define a function that lets the user add quotes to the display list
 function addQuotes() {
   // ask the user to input the author and then the quote

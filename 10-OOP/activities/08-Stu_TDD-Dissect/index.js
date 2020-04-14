@@ -7,6 +7,6 @@ const value = new Arithmetic(4)
   .minus(23)
   .plus(42)
   .plus(108)
-  .value();
+  .value(); // returning the value 
 
 console.log(value);

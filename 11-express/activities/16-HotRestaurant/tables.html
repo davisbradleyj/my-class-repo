@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="./bulma.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Hottest Restaurant in Town</title>
+</head>
+
+<body>
+    <section class="hero-head is-mobile">
+        <div class="container is-fluid has-text-centered">
+            <div class="notification" id="hero">
+                <h1 class="title is-1"><span class="fa fa-fire"></span> Hot Restaurant</h1>
+                <br />
+                <h2 class="title is-3">We can only accomodate 5 tables, so please book your reservation in advance!
+                </h2>
+                <br />
+                <div class="buttons is-centered">
+                    <a href="/reservations">
+                        <button class="button is-danger"><span class="fa fa-credit-card"></span> Make
+                            Reservation</button>
+                    </a>
+                    <a href="/">
+                        <button class="button is-white"><span class="fa fa-home"></span>Home</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </nav>
+    </section>
+    <br/>
+    <div class="container is-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Reservation List</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="reserved-tables" class="list-group">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="container is-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Wait List</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="wait-list" class="list-group">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $.get("/reservationlist", function (data) {
+            for (var i = 0; i < data.length; i++) {
+                console.log(data[i]);
+                var listGroupItem = $("<li class='list-group-item'>");
+                var j = i + 1
+                listGroupItem.append($("<h2>").text("Table: " + j));
+                listGroupItem.append($("<h3>").text("Name: " + data[i].name));
+                listGroupItem.append($("<h3>").text("Email: " + data[i].email));
+                listGroupItem.append($("<h3>").text("Phone: " + data[i].phone));
+
+                $("#reserved-tables").append(listGroupItem);
+            }
+        });
+
+        $.get("/waitlist", function (data) {
+            for (var i = 0; i < data.length; i++) {
+                console.log(data[i]);
+                var listGroupItem = $("<li class='list-group-item'>");
+                var j = i + 1
+                listGroupItem.append($("<h2>").text("Place in Line: " + j));
+                listGroupItem.append($("<h3>").text("Name: " + data[i].name));
+                listGroupItem.append($("<h3>").text("Email: " + data[i].email));
+                listGroupItem.append($("<h3>").text("Phone: " + data[i].phone));
+
+                $("#wait-list").append(listGroupItem);
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "no-reservations",
+  "version": "1.0.0",
+  "description": "restaurant reservation app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Cristina Terry, Brad Davis",
+  "license": "ISC"
+}

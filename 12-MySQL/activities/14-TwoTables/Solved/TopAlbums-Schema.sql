@@ -1,6 +1,5 @@
 DROP DATABASE IF EXISTS top_songsDB;
 CREATE database top_songsDB;
-
 USE top_songsDB;
 
 CREATE TABLE top5000 (

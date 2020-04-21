@@ -159,8 +159,7 @@ function songSearch() {
 }
 
 function songAndAlbumSearch() {
-  inquirer
-    .prompt({
+  inquirer.prompt({
       name: "artist",
       type: "input",
       message: "What artist would you like to search for?"

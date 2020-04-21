@@ -5,7 +5,10 @@
 
 
 // Define the port we're going to be listening on
+var express = require("express");
 
+var app = express();
+var PORT = 3505;
 
 
 // This helper function takes in a string and returns all the letters of the
@@ -14,14 +17,14 @@
 function evenLetters(str) {
   // Define a string that contains all the letters of the alphabet
   // We will be using this later to determine the output
-
+  var str = ["abcdefghijklmnopqrstuvwxyz"]
   
   // Initialize an empty string for the output
-
+  var estr = []
   
   // Initialize an empty object that keeps track of the characters we've seen so far.
   // Characters we don't want displayed will have a value of true within this object
-
+  var obj = {}
   
   // Iterate through the argument string
   for (var i = 0; i < str.length; i++) {

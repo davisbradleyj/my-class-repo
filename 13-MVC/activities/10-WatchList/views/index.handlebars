@@ -1,0 +1,78 @@
+<h1>Movie Whatever</h1>
+
+<ul>
+    {{#each movies}}
+    <li>
+        <p>
+            {{this.id}}. {{this.movie}}
+            <button data-movieid="{{this.id}}" class="delMovie">Re-Movie!</button>
+        </p>
+    </li>
+    {{/each}}
+</ul>
+
+<h2>Add a Movie</h2>
+<form id="addmovie" class="button-size">
+    <textarea type="text" name="movie"></textarea>
+    <button type="submit">Add Movie!</button>
+</form>
+
+<h2>Update a Movie</h2>
+<form id="updatemovie" class="button-size">
+    <select name="movieid">
+        {{#each movies}}
+        <option value="{{this.id}}">{{this.movie}}</option>
+        {{/each}}
+    </select>
+    <textarea type="text" name="movie" placeholder="movie"></textarea>
+    <button type="submit">Update Movie!</button>
+</form>
+
+<script type="text/javascript">
+    $(".delMovie").on("click", function (event) {
+        console.log("click")
+        var id = $(this).data("movieid")
+        $.ajax("/api/movies/" + id, {
+            type: "DELETE"
+        }).then(
+            function () {
+                console.log("deleted id ", id);
+                location.reload();
+            }
+        );
+    });
+    $("#addmovie").on("submit", function (event) {
+        event.preventDefault();
+        var newMovie = {
+            movie: $("#addmovie [name=movie]").val().trim()
+        };
+        console.log(newMovie.movie)
+        $.ajax("/api/movies", {
+            type: "POST",
+            data: newMovie
+        }).then(
+            function () {
+                console.log("added a movie");
+                location.reload();
+            });
+    });
+    $("#updatemovie").on("submit", function (event) {
+        // Make sure to preventDefault on a submit event.
+        event.preventDefault();
+        var id = $("[name=movieid]").val().trim();
+        console.log(id)
+        var updatedMovie = {
+            movie: $("#updatemovie [name=movie]").val().trim()
+        };
+        // Send the PUT request.
+        $.ajax("/api/movies/" + id, {
+            type: "PUT",
+            data: updatedMovie
+        }).then(
+            function () {
+                console.log("updated id ", id);
+                // Reload the page to get the updated list
+                location.reload();
+            });
+    });
+</script>

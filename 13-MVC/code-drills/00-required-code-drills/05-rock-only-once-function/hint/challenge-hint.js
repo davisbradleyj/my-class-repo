@@ -12,14 +12,14 @@ function onlyOnce() {
   // defined within this function, it will look for the variable in
   // the global scope which currently points to this function
 
-  
+  onlyOnce = function() {return false}
 
   // Console log "I'm RUNNING!"
-
+console.log("I'm Running!")
   
 
   // return true
-
+return true
   
   // -------------------- End Code Area ---------------------
 }

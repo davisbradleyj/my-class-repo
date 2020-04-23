@@ -1,0 +1,17 @@
+{
+  "name": "10-watchlist",
+  "version": "1.0.0",
+  "description": "rush hour is the POWER HOUR!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "BD, SA",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mysql": "^2.18.1"
+  }
+}

@@ -30,7 +30,6 @@ app.get("/icecreams/:name", function(req, res) {
       return res.render("icecream", icecreams[i]);
     }
   }
-  // return res.
 });
 
 app.get("/icecreams", function(req, res) {

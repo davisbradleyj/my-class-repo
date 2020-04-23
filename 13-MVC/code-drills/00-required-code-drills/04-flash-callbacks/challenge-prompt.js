@@ -56,7 +56,7 @@ var six = 6;
 //
 // You should only need one function call to complete this.
 // -------------------- Your Code Here --------------------
-
+divideThree(six,addTwo)
 // -------------------- End Code Area ---------------------
 
 
@@ -66,7 +66,7 @@ var four = 4;
 //
 // You should only need one function call to complete this.
 // -------------------- Your Code Here --------------------
-
+subtractOne(four,square,addTwo)
 // -------------------- End Code Area ---------------------
 
 
@@ -76,5 +76,5 @@ var five = 5;
 //
 // You should only need one function call to complete this.
 // -------------------- Your Code Here --------------------
-
+square(five,addTwo,divideThree,subtractOne)
 // -------------------- End Code Area ---------------------

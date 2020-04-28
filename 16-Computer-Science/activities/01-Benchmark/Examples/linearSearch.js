@@ -3,7 +3,7 @@ var Benchmark = require("benchmark");
 var generate = require("../shared/generate");
 
 // Generate an array of the given length.
-var length = 10; // 10000 => 10000000
+var length = 100; // 10000 => 10000000
 var stuff = generate(length);
 var randomValue = stuff[Math.ceil(Math.random() * length)];
 

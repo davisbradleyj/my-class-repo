@@ -8,12 +8,25 @@
 // within the array. If the target word is not within the array, return -1.
 function binarySearch(target, arr) {
   // -------------------- Your Code Here --------------------
-
-
-
-
-  // -------------------- End Code Area ---------------------
+  var upper = (arr.length - 1);
+  var lower = 0;
+  var def = -1;
+  while (lower <= upper) {
+  var mid = Math.floor((upper+lower)/2)
+  
+    if (target > arr[mid]) {
+      lower = mid
+    }
+    else if (target < arr[mid]) {
+      upper = mid
+    }
+    else (target === arr[mid]); {
+      return mid
+    }
+  }
+  console.log(def)
 }
+  // -------------------- End Code Area ---------------------
 
 
 // Tests - Do Not Modify

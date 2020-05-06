@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Making An IndexedDB Connection</title>
+  </head>
+
+  <body>
+    <h1>Open Your Developer Tools > Application > IndexedDB</h1>
+  </body>
+</html>
+<script>
+  // window.indexDB = window.indexDb || window.mozIndexedDB || window.webkitIndexedDb || window.msIndexedDB;
+  // //make sure it is supported: 
+  // if (!window.indexedDB){ 
+  //   alert("Not Supported");
+  // }
+  // We request a database instance.
+
+  const request = indexedDB.open("firstDatabase", 1);
+  console.log(request);
+
+  request.onerror = err => {
+    console.log(err);
+  }
+  // This returns a result that we can then manipulate.
+  //https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/onsuccess
+  request.onsuccess = event => {
+    console.log(request.result);
+    
+  };
+
+ 
+</script>

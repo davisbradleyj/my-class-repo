@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Making An IndexedDB Connection</title>
+</head>
+
+<body>
+  <h1>Open Your Developer Tools > Application > IndexedDB</h1>
+</body>
+</html>
+<script>
+ const req = indexedDB.open("dbOne",1);
+ console.log(req);
+
+ req.onerror = err => {
+   console.log(err);
+ }
+ req.onsuccess = event => {
+   console.log(req.result);
+ }
+</script>

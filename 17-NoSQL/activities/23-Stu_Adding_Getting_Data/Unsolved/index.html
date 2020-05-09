@@ -9,17 +9,39 @@
   <body>
     <h1>Open Your Developer Tools > Application > IndexedDB</h1>
     <script>
-      const request = window.indexedDB.open("toDoList", 1);
+      const request = window.indexedDB.open("toDoList", 2);
       
       request.onupgradeneeded = event => {
+        console.log(event)
+        console.log(event.target)
         const db = event.target.result;
        // CODE HERE
+       const toDoListStore = db.createObjectStore("toDoList", {keyPath: "listID"});
+       toDoListStore.createIndex("dueDate","date");
       }
 
-      
       request.onsuccess = () => {
         const db = request.result;
         // CODE HERE
+        const transaction = db.transaction(["toDoList"], "readwrite");
+        const toDoListStore = transaction.objectStore("toDoList");
+        const dueDate = toDoListStore.index("dueDate");
+
+        toDoListStore.add({ listID: "1", status: "concept"})
+        toDoListStore.add({ listID: "2", status: "in-progress"})
+        toDoListStore.add({ listID: "3", status: "complete"})
+        toDoListStore.add({ listID: "4", status: "backlog"})
+        
+        const getRequest = toDoListStore.get("1");
+        getRequest.onsuccess = () => {
+          console.log(getRequest.result);
+        };
+
+        const getRequestId = dueDate.getAll("complete");
+        getRequestId.onsuccess = () => {
+          console.log(getRequestId.result);
+        };
+  
       };
 
     </script>

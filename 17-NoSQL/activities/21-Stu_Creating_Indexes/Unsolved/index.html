@@ -9,10 +9,15 @@
   <body>
     <h1>Open Your Developer Tools > Application > IndexedDB</h1>
     <script>
-      const request = window.indexedDB.open("toDoList", 1);
+      const request = window.indexedDB.open("dbThree", 1);
 
       request.onupgradeneeded = ({ target }) => {
-        // CODE HERE
+        const db = target.result;
+        console.log("onupgradeneeded => executed");
+        const objectStore = db.createObjectStore("dbThree");
+        objectStore.createIndex("icebox","icebox")
+        objectStore.createIndex("inprogress","inprogress")
+        objectStore.createIndex("complete","complete")
       };
 
       request.onsuccess = event => {

@@ -5,8 +5,13 @@
 var cheerio = require("cheerio");
 var axios = require("axios");
 
+console.log("\n***********************************\n" +
+            "Grabbing every thread name and link\n" +
+            "from Reuters Market news:" +
+            "\n***********************************\n");
+
 // Make a request via axios to grab the HTML body from the site of your choice
-axios.get("https://www.nytimes.com").then(function(response) {
+axios.get("https://www.reuters.com/finance/markets/us").then(function(response) {
 
   // Load the HTML into cheerio and save it to a variable
   // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -20,13 +25,15 @@ axios.get("https://www.nytimes.com").then(function(response) {
   // but be sure to visit the package's npm page to see how it works
   $("article").each(function(i, element) {
 
-    var title = $(element).children().text();
+    var title = $(element).find("h3").text();
     var link = $(element).find("a").attr("href");
+    var time = $(element).find("time").text();
 
     // Save these results in an object that we'll push into the results array we defined earlier
     results.push({
       title: title,
-      link: link
+      link: link,
+      time: time
     });
   });
 

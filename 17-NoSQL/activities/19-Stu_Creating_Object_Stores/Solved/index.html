@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Creating An Object Store</title>
+  </head>
+
+  <body>
+    <h1>Open Your Developer Tools > Application > IndexedDB</h1>
+    <script>
+      const request = window.indexedDB.open("toDoList", 1);
+
+      request.onsuccess = event => {
+        console.log(request.result);
+      };
+
+      request.onupgradeneeded = ({ target }) => {
+        console.log("onupgradeneeded => executed");
+        const db = target.result;
+        const objectStore = db.createObjectStore("toDoList");
+        // const objectStore = db.createObjectStore("toDoList", {"keypath": "Placeholder"});//like a primary key
+        //const objectStore = db.createObjectStore("toDoList", {"autoincrement": true});//like a primary key
+      };
+    </script>
+  </body>
+</html>

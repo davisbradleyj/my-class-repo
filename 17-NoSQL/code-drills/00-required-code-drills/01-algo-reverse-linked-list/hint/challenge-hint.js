@@ -20,30 +20,31 @@ function LinkedList() {
   this.reverse = function() {
     // -------------------- Your Code Here --------------------
     // Initialize the current node to be the head of the list
-
+    var currentNode = this.head;
     
     // Initialize the previous node as null
-
+    var prevNode = null;
     
     // While the currentNode isn't while (we haven't reached the tail of the list)
-
+    while (currNode !== null) {
     
       // Temporarily store the next node in the list
-
+      var nextNode = currentNode.next
       
       // Set the next pointer of the current node to be the previous node
-
+      currentNode.next = prevNode
       
       // Set the previous node variable to point to the current node
-
+      prevNode = currentNode
       
       // Set the next node in the list to be the current node
-
-      
+      currentNode = nextNode
+    }
     // Set the head to be the last non-null node in the list
-
+      this.head = prevNode
 
     // Return `this` for easy method chaining
+      return this
 
     
   // -------------------- End Code Area ---------------------

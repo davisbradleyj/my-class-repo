@@ -1,36 +1,17 @@
-import React, { useState } from "react";
-import Home from "./pages/Home";
-import ThemeContext from "./components/ThemeContext";
-import UserContext from "./components/UserContext";
-import AlertContext from "./components/AlertContext";
+import React from "react";
+import Form from "./components/Form";
+import TodoList from "./components/TodoList";
+import { TodoProvider } from "./utils/GlobalState" 
+import "./App.css";
 
-function App() {
-
-  const [user, setUser] = useState({
-    name: "Bob",
-    getUserToken: getUserToken
-  })
-  
-  const [alert, setAlert] = useState({
-    display: false,
-    theme: "success",
-    onClick: (theme, display) => setAlert({...alert, theme, display})
-  })
-
-  function getUserToken() {
-    return "SampleToken123";
-  }
-
-  // Here we are overwriting each Context Object with values from the state of App.js and a string literal.
-    return (
-      <AlertContext.Provider value={alert}>
-        <UserContext.Provider value={user}>
-          <ThemeContext.Provider value={"dark"}>
-            <Home />
-          </ThemeContext.Provider>
-        </UserContext.Provider>
-      </AlertContext.Provider>
-    );
-  }
-
+function App () {
+  return (
+    <div className="container text-center">
+    < TodoProvider>
+    < Form />
+    < TodoList />
+    </ TodoProvider>
+    </div>
+  );
+}
 export default App;

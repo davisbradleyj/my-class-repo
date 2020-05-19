@@ -21,10 +21,6 @@ const question1 = changeStr("Hello");
   "elloH"
 
    --------------- End Answer Area ---------------- */
-
-
-
-
 // ------------------------------------------------------
 const person = ({name, location, age}) => {
   return `Hello, my name is ${name}. I am ${age} years old, and I am from ${location}.`;
@@ -43,9 +39,6 @@ const question3 = person(temp);
   "Hello, my name is John. I am 28 years old, and I am from Anytown, USA."
 
    --------------- End Answer Area ---------------- */
-
-
-
 
 // ------------------------------------------------------
 const combineStr = (str1, str2) => [...str1, ...str2];

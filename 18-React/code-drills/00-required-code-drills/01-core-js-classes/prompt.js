@@ -38,17 +38,28 @@ var BST = function(root) {
 }
 
 // =============== YOUR WORK HERE =============
-
-
-
-
-
-
-
-
-
-
-
+class BST {
+  constructor(root) {
+    this.root = root
+  }
+  insert(node) {
+    let insert = node
+    node = this.root
+    while (node) {
+      if (node.left && insert.data < node.data) {
+        node = node.left
+      } else if (node.right && insert.data > node.data) {
+        node = node.right
+      } else if (!node.left && insert.data < node.data) {
+        node.left = insert
+        node = null
+      } else if (!node.right && insert.data > node.data) {
+        node.right = insert
+        node = null
+     }
+    }
+  }
+}
 // ============= END WORK =============
 
 
@@ -69,19 +80,22 @@ var Queue = function(data = []) {
 
 // =============== YOUR WORK HERE =============
 
-
-
-
-
-
-
-
-
-
+class Queue {
+  constructor(data = []) {
+    this.data = data
+  }
+  add(record) {
+    this.data.push(record)
+  }
+  remove() {
+    return this.data.shift()
+  }
+  peek() {
+    return this.data[0]
+  }
+}
 
 // ============= END WORK =============
-
-
 
 // 3. Stack Constructor
 var Stack = function(data = []) {
@@ -96,20 +110,20 @@ var Stack = function(data = []) {
     return this.data[data.length -1]
   }
 }
-
-
 // =============== YOUR WORK HERE =============
-
-
-
-
-
-
-
-
-
-
-
+class Stack {
+  constructor(data = []) {
+    this.data = data
+  }
+  add(record) {
+    this.data.push(record)
+  }
+  remove() {
+    return this.data.pop()
+  }
+  peek() {
+    return this.data[data.length-1]
+  }
 // ============= END WORK =============
 
 
@@ -120,15 +134,10 @@ var Node = function (data) {
 }
 
 // =============== YOUR WORK HERE =============
-
-
-
-
-
-
-
-
-
-
-
+class Node {
+  constructor (data) {
+    this.data = data
+    this.children = []
+  }
+}
 // ============= END WORK =============

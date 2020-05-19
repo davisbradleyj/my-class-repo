@@ -6,24 +6,55 @@
 //                     Helper Functions
 //
 // -------------------- Your Code Here --------------------
+const swap = (arr,idx1,idx2) => {
+    const temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp
+}
 
+const sortAsc = (arr) => {
+    arr.forEach(out => {
+        arr.forEach((elem, i) => {
+            if ((i<arr.length-1) && (arr[i+1] < arr[i])) {
+                swap (arr,i,i+1)
+            }
+        })
+    })
+}
 
-
-
+const sortDesc = (arr) => {
+    arr.forEach(out => {
+        arr.forEach((elem, i) => {
+            if ((i<arr.length-1) && (arr[i+1] > arr[i])) {
+                swap (arr,i,i+1)
+            }
+        })
+    })
+}
 // --------------------- End Code Area --------------------
-
-
 
 // -------------------------------------------------------
 //                     Sort Function
 //
 // -------------------- Your Code Here --------------------
-
-
+const upDown = (arr) => {
+    let evenArr = []
+    let oddArr = []
+    arr.forEach(elem => {
+        if (elem % 2 === 0) {
+            evenArr = [...evenArr, elem]
+        } else {
+            oddArr = [...oddArr, elem]
+        }
+    })
+    sortAsc(evenArr)
+    sortDesc(oddArr)
+    return [...evenArr,...oddArr]
+}
 
 
 
 // --------------------- End Code Area --------------------
 
 
-module.exports = upDownSort;
+module.exports = upDown;

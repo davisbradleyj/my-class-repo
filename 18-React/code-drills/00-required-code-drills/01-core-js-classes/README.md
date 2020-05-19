@@ -8,7 +8,7 @@ In this exercise, you are given a series of pre-built constructors. Your job is 
 
 This means that all the code should function exactly the same, it'll just be presented in a different syntax.
 
-Here is example syntax for a class a a reminder:
+Here is example syntax for a class as a reminder:
 
 ```javascript
 

@@ -6,7 +6,6 @@
 //                    Helper Functions
 //
 // -------------------------------------------------------
-
 // write a helper function for swapping two elements within an array
 function swap(arr, idx1, idx2) {
   var temp = arr[idx1];

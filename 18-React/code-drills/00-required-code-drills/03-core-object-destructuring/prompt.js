@@ -12,11 +12,26 @@ const hogwarts = {
 // Note that your goal is to manipulate the original object, not a copy of an array one of its keys points to
 
 // ============ YOUR WORK HERE ===========
-
-
-
-
-
+sortGryffindor = (student) => {
+  let {gryffindor} = hogwarts
+  gryffindor = [...gryffindor,student]
+  hogwarts.gryffindor = [...gryffindor]
+}
+sortSlytherin = (student) => {
+  let {slytherin} = hogwarts
+  slytherin = [...slytherin,student]
+  hogwarts.slytherin = [...slytherin]
+}
+sortRavenclaw = (student) => {
+  let {ravenclaw} = hogwarts
+  ravenclaw = [...ravenclaw,student]
+  hogwarts.ravenclaw = [...ravenclaw]
+}
+sortHufflepuff = (student) => {
+  let {hufflepuff} = hogwarts
+  hufflepuff = [...hufflepuff,student]
+  hogwarts.hufflepuff = [...hufflepuff]
+}
 //  ============== END WORK ==============
 
 // TESTS
@@ -25,19 +40,18 @@ sortSlytherin("Draco Malfoy")
 sortRavenclaw("Luna Lovegood")
 sortHufflepuff("Cedric Diggory")
 
+// console.log(hogwarts)
 
 // 2.
 // In one line of code, create a function called "goToCommonRoom" which takes a house as an argument, and returns all the students from that given house.
 // ============ YOUR WORK HERE ===========
 
-
-
-
+goToCommonRoom = (house) => hogwarts[house] 
 
 //  ============== END WORK ==============
 
 // TESTS
-console.log(goToCommonRoom("gryffindor"))
+// console.log(goToCommonRoom("gryffindor"))
 
 // 3.
 // Create a function called "battleOfHogwarts" that returns the students from all the houses except Slytherin in one array.
@@ -45,31 +59,34 @@ console.log(goToCommonRoom("gryffindor"))
 
 // ============ YOUR WORK HERE ===========
 
+battleOfHogwarts = () => {
+  const {gryffindor, hufflepuff, ravenclaw} = hogwarts
+  let houses = [...gryffindor, ...hufflepuff, ...ravenclaw]
+  return houses
+}
 
-
-
-
+// console.log(battleOfHogwarts())
 //  ============== END WORK ==============
 
 // TESTS
-console.log(battleOfHogwarts())
+// console.log(battleOfHogwarts())
 
 
 // 4.
 // Create a function called "letterP" which returns an array of all the hogwarts students who have a p in their names
 // You must use an arrow function, object destructuring, array destructuring and the filter method
 
-
 // ============ YOUR WORK HERE ===========
-
-
-
-
+letterP = () => {
+  const {gryffindor,hufflepuff,ravenclaw,slytherin} = hogwarts
+  let p = [...gryffindor, ...hufflepuff, ...ravenclaw, ...slytherin]
+  return p.filter(student => student.includes("P"))
+}
 
 //  ============== END WORK ==============
 
 // TESTS
-console.log(letterP())
+// console.log(letterP())
 
 // 5. Create a function called "forgetThem" which returns all the students in hogwarts except for Seamus, Pansy, Cho, or Ernie
 // You must use an arrow function, object destructuring and array destructuring.
@@ -85,24 +102,31 @@ forgetThem = () => {
 // ============ YOUR WORK HERE ===========
 
 
-
-
-
 //  ============== END WORK ==============
 
 // TESTS
-console.log(forgetThem())
+// console.log(forgetThem())
 
-// 6. Create a function called houseSwap. You function must manipulate the original object so that all the students in Gryffindor move to Hufflepuff, all the Hufflepuffs move to Slytherin, all the Slytherins move to Ravenclaw, and all the Ravenclaws move to Gryffindor
+// 6. Create a function called houseSwap. 
+//You function must manipulate the original object so that 
+// all the students in Gryffindor move to Hufflepuff, 
+// all the Hufflepuffs move to Slytherin, 
+// all the Slytherins move to Ravenclaw, 
+// and all the Ravenclaws move to Gryffindor
 
 
 // ============ YOUR WORK HERE ===========
 
+houseSwap = () => {
+  let {gryffindor,hufflepuff,ravenclaw,slytherin} = hogwarts
 
-
-
-
+  hogwarts.gryffindor = ravenclaw
+  hogwarts.hufflepuff = gryffindor
+  hogwarts.slytherin = hufflepuff
+  hogwarts.ravenclaw = slytherin
+  console.log(hogwarts)
+}
 //  ============== END WORK ==============
 
 // TESTS
-console.log(houseSwap())
+houseSwap()

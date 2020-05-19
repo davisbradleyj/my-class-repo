@@ -70,7 +70,6 @@ whoChanging = () => {
     if (counter = 20) {
       bool = false
     }
-
     counter+=incrementer
   }
 }

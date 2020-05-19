@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import CardContainer from "../components/CardContainer";
 import Row from "../components/Row";
+import UserContext from "../utils/ContextAPI"
 
 function Gallery() {
 
@@ -60,6 +61,7 @@ function Gallery() {
   }
 
   return (
+    <UserContext.Provider value={{ user, users, handleBtnClick,  }}>
     <div>
       <h1 className="text-center">Welcome to LinkedUp</h1>
       <h3 className="text-center">Click on the arrows to browse users</h3>
@@ -74,6 +76,7 @@ function Gallery() {
         />
       </Row>
     </div>
+    <UserContext.Provider/ >
   );
 }
 

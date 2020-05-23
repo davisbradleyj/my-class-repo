@@ -8,18 +8,11 @@
 // What is the time complexity of this function? Why?
 //
 /* --------------- YOUR ANSWER HERE ---------------
-
-
-
-
-
+0(n).  Linear scale and iterates once
    --------------- END ANSWER AREA ---------------- */
 function cubeNum(num) {
   return num * num * num;
 }
-
-
-
 // -------------------- Question 2 --------------------
 //
 // `findLowestNum` takes an array of numbers and returns the smallest number
@@ -28,9 +21,7 @@ function cubeNum(num) {
 //
 /* --------------- YOUR ANSWER HERE ---------------
 
-
-
-
+0(n), only iterates once.
 
    --------------- END ANSWER AREA ---------------- */
 function findLowestNum(arr) {
@@ -40,9 +31,6 @@ function findLowestNum(arr) {
   }
   return lowest;
 }
-
-
-
 // -------------------- Question 3 --------------------
 //
 // `checkDivisors` takes an array of numbers and returns true if any
@@ -51,9 +39,7 @@ function findLowestNum(arr) {
 //
 /* --------------- YOUR ANSWER HERE ---------------
 
-
-
-
+n^2, cycles through array twice
 
    --------------- END ANSWER AREA ---------------- */
 function checkDivisors(arr) {
@@ -68,8 +54,6 @@ function checkDivisors(arr) {
   }
 }
 
-
-
 // -------------------- Question 4 --------------------
 //
 // `strToArray` takes in a string and seperates the characters
@@ -78,7 +62,7 @@ function checkDivisors(arr) {
 // What is the time complexity of this function? Why?
 //
 /* --------------- YOUR ANSWER HERE ---------------
-
+0(n), only iterating through the string once, regadless of length
 
 
 
@@ -101,8 +85,6 @@ function strToArray(str) {
   return arr;
 }
 
-
-
 // -------------------- Question 5 --------------------
 //
 // `hamming` returns the number of differences between two strings of
@@ -110,8 +92,7 @@ function strToArray(str) {
 // What is the time complexity of this function? Why?
 //
 /* --------------- YOUR ANSWER HERE ---------------
-
-
+0(n) same as other, only once through, even though it is two inputs
 
 
 

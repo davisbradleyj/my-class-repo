@@ -45,27 +45,17 @@
     return newString
   }
 
-
-
-
 // _______________________ ANSWERS HERE _______________________
 
 // Time complexity for #1:
-
+n^2
 // Time complexity for #2: 
-
+n
 // Which solution, if any, is faster: 
-
+2
 // ____________________________________________________________
 
 // =============================================================
-
-
-
-
-
-
-
 
 // ****************************  2. *************************
 
@@ -109,22 +99,14 @@ return largestSum
 // _______________________ ANSWERS HERE _______________________
 
 // Time complexity for #1: 
-
+n
 // Time complexity for #2: 
-
+n^2
 // Which solution, if any, is faster: 
-
+1
 // ____________________________________________________________
 
 // =============================================================
-
-
-
-
-
-
-
-
 
 // ****************************  3. *************************
 
@@ -163,9 +145,9 @@ return true
 // _______________________ ANSWERS HERE _______________________
 
 // Time complexity for #1: 
-
+n
 // Time complexity for #2: 
-
+n^2 indexOf
 // Which solution, if any, is faster: 
 // ____________________________________________________________
 
@@ -197,39 +179,33 @@ for (var i = 0 ; i < c.length ; i++) {
     }
   }
 }
-
 return total
 }
 
 
 // #2
-
 function repeatChars(s, c) {
 var obj = {};
 var total = 0; 
-
 for (var i = 0 ; i < s.length ; i ++) {
   obj[s[i]] = true ;
-
 }
-
 for (var i = 0 ; i < c.length ; i ++) {
   if (obj[c[i]]) {
     total++
-  }
-    
+  }   
 }
-
 return total
 }
 
 // _______________________ ANSWERS HERE _______________________
 
 // Time complexity for #1: 
-
+n^2
 // Time complexity for #2: 
-
+n
 // Which solution, if any, is faster: 
+2
 // ____________________________________________________________
 
 // =============================================================
@@ -240,7 +216,8 @@ return total
 
 // ========================= GROUPS =========================== 
 
-// Return an array of arrays. Each subarray should contain the beginning and ending index of each sequence of thrre or ore consecutive, reappearing characters.
+// Return an array of arrays. Each subarray should contain the beginning and ending index of each 
+// sequence of three or more consecutive,reappearing characters.
 
 // #1
 function groups(str) {

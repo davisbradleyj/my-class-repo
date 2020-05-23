@@ -10,7 +10,7 @@
 //
 /* --------------- YOUR ANSWER HERE ---------------
 
-  
+  0(n), unnested loops
 
 
 
@@ -42,11 +42,12 @@ function evenFibonacci(num) {
 //
 /* --------------- YOUR ANSWER HERE ---------------
 
-  
+  0(n). Inner loop is a constant
 
 
 
-   --------------- END ANSWER AREA ---------------- */
+
+  --------------- END ANSWER AREA ---------------- */
 function doodleVowel(arr) {
   var vowels = 'aeiou'
   var doodle = [];
@@ -58,8 +59,6 @@ function doodleVowel(arr) {
   return doodle;
 }
   
-
-
 // -------------------- Question 3 --------------------
 //
 // This function takes in a rectangular matrix and returns
@@ -70,9 +69,9 @@ function doodleVowel(arr) {
 //
 /* --------------- YOUR ANSWER HERE ---------------
 
-
-
-
+Single array from a rectangular matrix feels like it 
+iterates through the matrix and adds each value, so it 
+would only constitute one loop - 0(n)
 
     --------------- END ANSWER AREA ---------------- */
 function spiralIter(matrix) {
@@ -105,8 +104,6 @@ function spiralIter(matrix) {
   return returnArr;
 }
 
-
-
 // -------------------- Question 4 --------------------
 //
 // `sumPrimeFactors` takes in a number and returns the sum
@@ -116,7 +113,7 @@ function spiralIter(matrix) {
 /* --------------- YOUR ANSWER HERE ---------------
 
   
-
+n^2
 
 
     --------------- END ANSWER AREA ---------------- */

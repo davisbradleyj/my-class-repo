@@ -1,7 +1,5 @@
 // Efficiency 4
 
-
-
 // `checkPrime` checks if the integer passed in as an argument is
 // a prime number, meaning it is not divisible except by 1 and itself.
 
@@ -11,15 +9,13 @@
 // Solve this problem in O(n) time.
 function nCheckPrime(num) {
   // -------------------- Your Code Here --------------------
-
-
-
-
+  for (var i=2; i<num;i++) {
+    if (num % i == 0 )
+      return false;
+  }
+  return true
   // -------------------- End Code Area ---------------------
 }
-
-
-
 // -------------------- Question 2 --------------------
 //
 // Solve this problem in O(sqrt(n)) time.

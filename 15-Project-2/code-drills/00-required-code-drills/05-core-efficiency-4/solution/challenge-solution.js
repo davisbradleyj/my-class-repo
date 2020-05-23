@@ -1,7 +1,5 @@
 // Efficiency 4
 
-
-
 // `checkPrime` checks if the integer passed in as an argument is
 // a prime number, meaning it is not divisible except by 1 and itself.
 
@@ -20,8 +18,6 @@ function nCheckPrime(num) {
 
   // -------------------- End Code Area ---------------------
 }
-
-
 
 // -------------------- Question 2 --------------------
 //

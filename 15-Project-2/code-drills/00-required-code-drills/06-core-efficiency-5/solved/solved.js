@@ -44,10 +44,6 @@
         } 
         return newString
       }
-  
-  
-  
-    
     // _______________________ ANSWERS HERE _______________________
     
     // Time complexity for #1: O(n^2)
@@ -59,13 +55,6 @@
     // ____________________________________________________________
     
     // =============================================================
-  
-  
-  
-  
-  
-  
-  
   
     // ****************************  2. *************************
   
@@ -118,14 +107,6 @@
     
     // =============================================================
   
-  
-  
-  
-  
-  
-  
-  
-  
     // ****************************  3. *************************
   
   // ======================= Unique Characters ========================= 
@@ -166,18 +147,11 @@
     
     // Time complexity for #2: O(n^2)
     
-    // Which solution, if any, is faster:  #1. Don't forget that built-in methods have their own time-complexity. Let's look at indexOf, for example. Index of iterates through an array until it finds the value passed to it in the argument. That means that for every iteration of our loop, we are looking through the array again. 
+    // Which solution, if any, is faster:  #1. Don't forget that built-in methods have their own time-complexity. Let's look at indexOf, for example. 
+    // Index of iterates through an array until it finds the value passed to it in the argument. That means that for every iteration of our loop, we are looking through the array again. 
     // ____________________________________________________________
     
     // =============================================================
-  
-  
-  
-  
-  
-  
-  
-  
   
     // ****************************  4. *************************
   
@@ -197,27 +171,21 @@
         }
       }
     }
-  
     return total
   }
-  
   
   // #2
   
   function repeatChars(s, c) {
     var obj = {};
     var total = 0; 
-  
     for (var i = 0 ; i < s.length ; i ++) {
       obj[s[i]] = true ;
-  
     }
-  
     for (var i = 0 ; i < c.length ; i ++) {
       if (obj[c[i]]) {
         total++
       }
-        
     }
   
     return total
@@ -274,22 +242,16 @@ function groups(str) {
           
           // Makes sure the group is larger than 3
           if (group[1]-group[0] >= 2 && !groups.includes(group)) {
-  
                 groups.push(group)
-  
           }
         }
         // reset the counter
         if (str[i] !== str[j]) {
           counter = 0;
         }
-  
       }
-      
     }
-  
     return groups
-  
   }
   
   // #2

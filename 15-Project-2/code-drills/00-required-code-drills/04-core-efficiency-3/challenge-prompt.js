@@ -9,12 +9,9 @@
 // What is the time complexity of this function? Why?
 //
 /* --------------- YOUR ANSWER HERE ---------------
-
+0(n), 
   
-
-
-
-   --------------- END ANSWER AREA ---------------- */
+ --------------- END ANSWER AREA ---------------- */
 function countCons(str) {
   str = str.toLowerCase();
   var cons = 'bcdfghjklmnpqrstvwxyz'
@@ -26,9 +23,6 @@ function countCons(str) {
   }
   return numCons;
 }
-
-
-
 // -------------------- Question 2 --------------------
 //
 // `reverse` takes a strings consisting of words seperated
@@ -38,19 +32,15 @@ function countCons(str) {
 //
 /* --------------- YOUR ANSWER HERE ---------------
 
-  
+0(n), all functions are on 0n time
 
-
-
-   --------------- END ANSWER AREA ---------------- */
+--------------- END ANSWER AREA ---------------- */
 function reverse(str) {
   var tempArr = str.split(" ")
   tempArr = tempArr.reverse();
   var reversedStr = tempArr.join(" ");
   return reversedStr;
 }
-
-
 
 // -------------------- Question 3 --------------------
 //
@@ -60,11 +50,9 @@ function reverse(str) {
 //
 /* --------------- YOUR ANSWER HERE ---------------
 
+sort is n log(n), so thats the time complexity when all others are 0(n)
 
-
-
-
-   --------------- END ANSWER AREA ---------------- */
+  --------------- END ANSWER AREA ---------------- */
 function anagramCheck (str1, str2) {
   str1 = str1.replace(/\s/g, '');
   str2 = str2.replace(/\s/g, '');
@@ -75,8 +63,6 @@ function anagramCheck (str1, str2) {
   return (str1 == str2);
 }
 
-
-
 // -------------------- Question 4 --------------------
 //
 // This function takes in a string and returns the longest 
@@ -85,11 +71,9 @@ function anagramCheck (str1, str2) {
 //
 /* --------------- YOUR ANSWER HERE ---------------
 
-  
+0(n) indexOf and subst are 0(n)
 
-
-
-   --------------- END ANSWER AREA ---------------- */
+ --------------- END ANSWER AREA ---------------- */
 function longestSubstring(str) {
   var longest = "";
   var current = "";

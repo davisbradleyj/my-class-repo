@@ -5,12 +5,12 @@ Given a character and a string, "indexOfLetter" returns the first time the lette
 Starter Code :*/
 function indexOfLetter(char, str) {
   // code starts here
+  for (var i = 0; i<str.length;i++) {
+    if (char === str[i])
+      return i
+  }
 
-
-
-
-
-  
+  return -1
   // code ends here
 }
 
@@ -26,17 +26,18 @@ Starter Code :*/
 function evenElementsOnly(obj, key) {
   // code starts here
 
-  
-
-
-
-
-
+  var evenArray = []
+  for (var i in obj[key]){
+    if (obj[key][i] % 2 === 0) {
+      evenArray.push(obj[key][i])
+    }
+  }
+  return evenArray
     // code ends here
 }
 
 var obj = {
-  key: [1000, 11, 51, 17]
+  key: [1000, 11, 51, 17, 20, 68]
 };
 var output = evenElementsOnly(obj, 'key');
 console.log(output); // --> [1000, 51]

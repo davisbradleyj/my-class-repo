@@ -5,7 +5,7 @@ Starter Code :*/
 function indexOfLetter(char, str) {
   // code starts here
 
-  for (i = 0; i < str.length; i++) {
+  for (var i = 0; i < str.length; i++) {
     if (str[i] === char) {
       return i; 
     }

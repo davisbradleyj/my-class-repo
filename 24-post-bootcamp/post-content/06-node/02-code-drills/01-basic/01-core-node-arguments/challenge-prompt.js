@@ -7,9 +7,7 @@
 
 // ---------- code starts here ----------
 
-
-
-
+console.log("Hello World")
 
 // ---------- code ends here ---------- 
 
@@ -18,11 +16,7 @@
 // next console log the command line arguments when this file is run in node
 
 // ---------- code starts here ---------- 
-
-
-
-
-
+console.log(process.argv)
 
 // ---------- code ends here ---------- 
 
@@ -33,9 +27,10 @@
 
 // ---------- code starts here ---------- 
 
+var arg1 = process.argv[2]
+var arg2 = process.argv[3]
 
-
-
+console.log(arg1,arg2)
 
 
 // ---------- code ends here ---------- 
@@ -47,7 +42,13 @@
 // For any other command line arguments, console log "Minion RAGE!"
 
 // ---------- code starts here ---------- 
-
+if (arg1 === "minion" && arg2 == "army") {
+    console.log("I have found Gru")
+} else if (arg1 === "minion"){
+    console.log("Still looking for Gru")
+} else {
+    console.log("MINION RAGE!")
+}
 
 
 

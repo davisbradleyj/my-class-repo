@@ -49,14 +49,15 @@ function subtractOne(num, callback1, callback2, callback3) {
     console.log(num  - 1);
 }
 
-
 var six = 6;
 // Using only the functions and the `six` variable given to you, console log 4
 // You will not have to use a function more than once and some might not be used
 //
 // You should only need one function call to complete this.
 // -------------------- Your Code Here --------------------
-
+// 6/3 = 2 (divideThree)
+// 2+2 = 4 (addTwo)
+divideThree(six, addTwo)
 // -------------------- End Code Area ---------------------
 
 
@@ -66,7 +67,10 @@ var four = 4;
 //
 // You should only need one function call to complete this.
 // -------------------- Your Code Here --------------------
-
+// 4-1 = 3
+// 3^2 = 9
+// 9+2 = 11
+subtractOne(four,square,addTwo)
 // -------------------- End Code Area ---------------------
 
 
@@ -76,5 +80,8 @@ var five = 5;
 //
 // You should only need one function call to complete this.
 // -------------------- Your Code Here --------------------
-
+// 5^2 = 25
+// 25-1 = 24
+// 24/3 = 8
+square(five,subtractOne,divideThree)
 // -------------------- End Code Area ---------------------

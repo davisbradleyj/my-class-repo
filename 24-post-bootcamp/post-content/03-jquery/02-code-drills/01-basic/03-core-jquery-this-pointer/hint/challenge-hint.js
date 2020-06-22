@@ -33,7 +33,7 @@ function populateButtons() {
   // create the "User" button
 
   
-  // add an ide to the "User" button so we can refer to it later
+  // add an id to the "User" button so we can refer to it later
 
 
   // instantiate the initial data attribute to be an empty string

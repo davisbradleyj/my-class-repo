@@ -127,9 +127,9 @@ function count() {
   if (counter >= 5){
     return this.counter;
   } else if (counter % 2 === 0) {
-    console.log("Even ", counter);
+    console.log("Even ", this.counter);
     counter++;
-    return this.count();
+    return count();
   } else {
     console.log("Odd ", this.counter);
     counter++;

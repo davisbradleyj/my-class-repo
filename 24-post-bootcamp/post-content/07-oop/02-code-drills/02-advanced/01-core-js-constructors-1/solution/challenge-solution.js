@@ -14,12 +14,12 @@ function Card(value) {
     var printValue = this.value<10 ? "0" + this.value : this.value;
     console.log(`
     -----------
-    |${printValue}       |
+    |${printValue}   |
     |         |
     |         |
     |         |
     |         |
-    |       ${printValue}|
+    |   ${printValue}|
     -----------
     `)
   }

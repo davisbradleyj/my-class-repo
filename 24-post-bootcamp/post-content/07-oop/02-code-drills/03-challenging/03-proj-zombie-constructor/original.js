@@ -105,7 +105,7 @@ var weapons = {
   sniper: {
     name: "Sniper",
     //number of zombies affected
-    reach: 1,
+    reach: 10,
     //Range of possible damage
     attack: [40, 60],
     //Chance of taking damge back (%)

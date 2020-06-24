@@ -9,15 +9,15 @@ describe("peakFinder", function() {
     expect(result).to.eql(3);
   });
 
-  it(`should return 3 if given the array [2, 4, 6, 8, 10]`, function() {
-    var arr = [2, 4, 6, 8, 10];
+  it(`should return 10 if given the array [2, 4, 9, 3, 10, 7]`, function() {
+    var arr = [2, 4, 9, 3, 10, 7];
 
     var result = peakFinder(arr);
 
     expect(result).to.eql(10);
   });
 
-  it(`should return 3 if given the array [4]`, function() {
+  it(`should return 4 if given the array [4]`, function() {
     var arr = [4];
 
     var result = peakFinder(arr);

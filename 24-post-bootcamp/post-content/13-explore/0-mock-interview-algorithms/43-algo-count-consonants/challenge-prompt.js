@@ -10,15 +10,19 @@
 // -------------------------------------------------------
 function countCons(str) {
   // -------------------- Your Code Here --------------------
-
-
-
-
-
-
+    let con = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
+    let count = 0
+    for (let i=0; i<str.length; i++) {
+      if (con.includes(str[i])){
+        count++;
+      }
+    }
+    return count
   // --------------------- End Code Area --------------------
 }
 
+// O(n)
+// 0 log n
 
 // This listens for and calls on the `countCons` function with the user input
 $(function() {

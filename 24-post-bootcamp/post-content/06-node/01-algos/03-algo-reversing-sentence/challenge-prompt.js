@@ -11,16 +11,13 @@
 // ----------------------------------------------------------
 function reverse(str) {
   // -------------------- Your Code Here --------------------
-
-
-
-
-
+  var strArr = str.split(" ")
+  strArr = strArr.reverse()
+  var revArr = strArr.join(" ")
+  return revArr
 
   // --------------------- End Code Area --------------------
 }
-
-
 
 // --------------------------- Test Cases ---------------------------
 //

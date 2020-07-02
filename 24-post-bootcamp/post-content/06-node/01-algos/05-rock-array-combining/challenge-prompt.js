@@ -1,27 +1,24 @@
 // Zipping Arrays
 
-
 // The `zipArrays` function should take in two arrays of numbers and
 // add numbers at the same indices together. Return a new array
 // with sums and any unpaired elements.
-
-
 
 // ----------------------------------------------------------
 //                        Zipping Arrays
 // ----------------------------------------------------------
 function zipArrays(arr1, arr2) {
   // -------------------- Your Code Here --------------------
-
-
+  var newArr = []
+  for (var i=0; i<; i++){
+    
+  }
 
 
 
 
   // --------------------- End Code Area --------------------
 }
-
-
 
 
 // --------------------------- Test Cases ---------------------------

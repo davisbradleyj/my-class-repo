@@ -7,32 +7,35 @@
 // -------------------- Your Code Here --------------------
 
 // Declare the function `checkShuffle`
-
+const checkShuffle = (deck,first,second) => {
 
   // Declare a variable to keep track of where we are in the first half
-
+  let firstHalf = 0
   
   // Declare a variable to keep track of where we are in the second half
-
+  let secondHalf = 0
   
   // Declare a variable to keep track of whether the deck is a single riffle shuffle and set it to be true by default
-
+  var singleRiffle = true
   
   // Iterate through the deck
+  deck.forEach(element => {
 
-  
     // If we haven't reached the end of the first half and the current card is identical to the current card in the first half, increment the index of the first half to move to the next card
-
-    
+    if ((firstHalf<first.length) && element === first[firstHalf]) {
+      firstHalf++;  
     // Otherwise, if we haven't reached the end of the second half and the current card is identical to the current card in the second half, increment the index of the second half to move to the next card
-
-    
-    // If neither of the above are true, then the deck is not a valid single riffle shuffle, so we will set the variable we have keeping track of the riffle shuffle validity to false
-
+    } else if ((secondHalf<second.length) && element === second[secondHalf]) {
+      secondHalf++; 
+      // If neither of the above are true, then the deck is not a valid single riffle shuffle, so we will set the variable we have keeping track of the riffle shuffle validity to false
+    } else
+      singleRiffle = false
+  })
     
   // If the variable we've using to keep track of the riffle shuffle validity is true and we've reached the end of both halves, return true
   // Return false otherwise
-
+  return (singleRiffle && (firstHalf === first.length) && (secondHalf === second.length))
+}
   
 // --------------------- End Code Area --------------------
 

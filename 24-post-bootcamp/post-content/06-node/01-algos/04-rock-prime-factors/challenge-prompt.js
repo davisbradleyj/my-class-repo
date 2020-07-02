@@ -8,31 +8,31 @@
 //                Helper Functions (Optional)
 //
 // -------------------- Your Code Here --------------------
-
-
-
-
+function isPrime(num){
+  for (let i=2; i<=num/2; i++){
+    if (num % i === 0) {
+      return false
+    }
+  }
+  return num !== 1
+}
 
 // --------------------- End Code Area --------------------
-
-
 
 // ----------------------------------------------------------
 //                        Prime Factors
 // ----------------------------------------------------------
 function primeFactors(num) {
   // -------------------- Your Code Here --------------------
-
-
-
-
-
-
+  var factor = []
+  for (let i=2; i<=num; i++){
+    if (num % i === 0 && isPrime(i)) {
+      factor.push(i)
+    }
+  }
+  return factor
   // --------------------- End Code Area --------------------
 }
-
-
-
 
 // --------------------------- Test Cases ---------------------------
 //

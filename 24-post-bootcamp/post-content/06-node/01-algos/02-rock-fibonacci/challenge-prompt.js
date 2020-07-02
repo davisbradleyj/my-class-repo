@@ -9,12 +9,16 @@
 // -------------------------------------------------------
 function fibonacci(num) {
   // -------------------- Your Code Here --------------------
-
-
-
-
-
-
+  var fib1 = []
+  for (var i=0;i<num;i++) {
+    if (i <= 1) {
+      fib1.push(i)
+    } else {
+      var fib2 = fib1[i-2]+fib1[i-1]
+      fib1.push(fib2)
+    }
+  }
+  return fib1
   // --------------------- End Code Area --------------------
 }
 

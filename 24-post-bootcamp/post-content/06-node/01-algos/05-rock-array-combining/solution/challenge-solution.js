@@ -1,11 +1,8 @@
 // Zipping Arrays
 
-
 // The `zipArrays` function should take in two arrays of numbers and
 // add numbers at the same indices together. Return a new array
 // with sums and any unpaired elements.
-
-
 
 // ----------------------------------------------------------
 //                        Zipping Arrays

@@ -9,23 +9,22 @@ function hamming(str1, str2) {
 
     // If the strings are different lengths, return
     // "Please pass two strings of equal length to this function"
-
-    
-  
+    if (str1.length !== str2.length) {
+        return "Please pass two strings of equal length to this function"
+    }
     // set a variable hamm to be 0. We will be using this variable to
     // keep track of the hamming distance
-
-    
+    var hamm = 0
   
     // iterate through the strings. If the characters at the current index
     // do not match, increment the hamm counter
-
-    
-
+    for (var i=0; i<str1.length; i++){
+        if (str1[i] !== str2[i]){
+            hamm++;
+        }
+    }
     // once we've finished iterating through the strings, return the hamm counter
-
-    
-    
+    return hamm
 
     // --------------------- End Code Area --------------------
 

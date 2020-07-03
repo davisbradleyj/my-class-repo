@@ -13,16 +13,23 @@
     function compressor(str) {
     // ====================== YOUR WORK HERE ===================
       var string = ""
-      
-
-
-
-
-
+      for (let i=0; i<str.length; i++){
+        count = 0
+        for (let j=0; j<str.length; j++) {
+          if (str[i] === str [j]) {
+            count++
+          }
+        }
+        if (!(string.includes(str[i]))) {
+          string += (str[i] + count.toString())
+        }
+      }
+      return string
     // =========================================================
     }
     console.log(compressor("hhhkkkkkkttttttttt"))
     console.log(compressor("hrkjqehvewqjhvheqvwjcgfwegiuf"))
+    console.log(compressor("wqeuyoiqwfasjhwiueorybadfkjhwiurybfaad"))
   </script>
   
 </body>

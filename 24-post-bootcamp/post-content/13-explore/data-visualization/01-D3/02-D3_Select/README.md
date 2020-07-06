@@ -20,4 +20,4 @@ Change into D3gital Champions to save the D3gital World!
  
  This challege section provides more practice with accessing objects. You will need to use the `gabumon` object to generate content on the page.
  * select the div with an id of gabumon and append the image to it.
-* Append a new `<ul>` element to the div and then append a new `<li>` element for each digivolution name inside the object.
+ * Append a new `<ul>` element to the div and then append a new `<li>` element for each digivolution name inside the object.

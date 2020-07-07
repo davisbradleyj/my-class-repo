@@ -26,11 +26,13 @@ function returnCustomObject(arr){
 	var obj ={};
   
   // ---------- Your Code Here ----------
-
-
-
-
-
+for (var i=0; i<arr.length; i++){
+   if (obj[arr[i]]){
+      obj[arr[i]]++
+   } else {
+      obj[arr[i]] = 1
+   }
+}
 
   // ---------- End of Code Area ----------
 
@@ -54,8 +56,6 @@ console.log(toyInventoryObj);
 //   'Slip n Slide': 1 }
 
 
-
-
 // ------------------------------------------------------------------
 console.log("==================== Question 02  ====================");
 // Evaluating Values in a Object:
@@ -67,11 +67,14 @@ function greatestFrequency(toyInventory){
   var maxToy, maxNum;
   
   // ---------- Your Code Here ----------
-
-
-
-
-
+   maxToy = ""
+   maxNum = 0
+   for (toy in toyInventory) {
+      if (toyInventory[toy]>maxNum) {
+         maxNum = toyInventory[toy]
+         maxToy = toy
+      }
+   }
 
   // ---------- End of Code Area ----------
 
@@ -81,9 +84,6 @@ function greatestFrequency(toyInventory){
 // The console log of your application should be the following string: 
 // "The toy that occurs the greatest number of times is 'Mr. Potato Head', which occurs 3 times."
 greatestFrequency(toyInventoryObj);
-
-
-
 
 // ------------------------------------------------------------------
 console.log("==================== Question 03  ====================");

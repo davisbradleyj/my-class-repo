@@ -9,12 +9,12 @@ var gabumon = {
         name: "WereGarurumon"
       },
       {
-          stage: 3,
-          name: "MetalGarurumon"
+        stage: 3,
+        name: "MetalGarurumon"
       },
       {
-          stage: 4,
-          name: "ZeedGarurumon"
+        stage: 4,
+        name: "ZeedGarurumon"
       }
     ],
     image: "https://vignette.wikia.nocookie.net/digimon/images/d/d1/Gabumon_b.jpg/revision/latest?cb=20171127121438"
@@ -56,13 +56,21 @@ list1.text("Victory Greymon")
 var list2 = d3.select("ul").append("li").text("Omnimon")
 
 // Select the div with an id of "agumon" and append a new <img> element
-var augmon = d3.select("#augmon").append("img");
-augmon.attr("src","https://vignette.wikia.nocookie.net/deathbattlefanon/images/d/dd/Agumon_DALEK-0.png/revision/latest/scale-to-width-down/340?cb=20191125192407")
+var agumon = d3.select("#agumon").append("img");
+agumon.attr("src","https://vignette.wikia.nocookie.net/deathbattlefanon/images/d/dd/Agumon_DALEK-0.png/revision/latest/scale-to-width-down/340?cb=20191125192407")
 // Challenge section!
 
 // This challege section provides more practice with accessing objects. You will need to use the `gabumon` object to generate content on the page.
-// select the div with an id of gabumon and append the image to it.
+//  select the div with an id of gabumon and append the image to it.
 // Append a new `<ul>` element to the div and then append a new `<li>` element for each digivolution name inside the object.
 
-
+var gabDiv = d3.select("#gabumon")
+var gabImg = gabDiv.append("img")
+gabImg.attr("src", "https://wikimon.net/images/thumb/a/ab/Gabumon_m10.jpg/180px-Gabumon_m10.jpg")
+var gabUl = gabDiv.append("ul")
+var digivolutions = gabumon.digivolutions
+for (var i=0; i<digivolutions.length; i++){
+  var gabLi = gabUl.append("li")
+  gabLi.text(digivolutions[i].name)
+}
   

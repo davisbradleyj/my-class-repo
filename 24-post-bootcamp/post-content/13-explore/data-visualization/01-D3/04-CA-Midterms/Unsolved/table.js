@@ -58,5 +58,26 @@ var ballots = [{
 // create a table row for each object within `ballots`
 // Place a green check mark in the last column for ballots that passed, and a red x mark for ones that failed
 
+
+d3.select("tbody")
+    .selectAll("tr")
+    .data(ballots)
+    .enter()
+    .append("tr")
+    .html(function (check) {
+        if (check.result === "passed"){
+            return `<td>${check.prop}</td>
+            <td>${check.description}</td>
+            <td><i class="fas fa-check-circle fa-lg" style="color:green"></i></td>`
+        } else if (check.result === "failed") {
+            return `<td>${check.prop}</td>
+            <td>${check.description}</td>
+            <td><i class="fas fa-times-circle fa-lg" style="color:red"></i></td>`
+        }
+    })
 // create an event listener that triggers when the jumbotron is clicked. 
 //The triggered event should prompt the user with an alert reading "You better have voted!"
+
+d3.select(".jumbotron").on("click",function() {
+    alert("You better have voted!")
+})

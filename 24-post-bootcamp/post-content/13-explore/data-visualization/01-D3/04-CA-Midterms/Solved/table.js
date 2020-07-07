@@ -75,7 +75,6 @@ d3.select("tbody")
             <td>${d.prop}</td> 
             <td>${d.description}</td>
             <td><i class="fas fa-times-circle fa-lg" style="color:Tomato"></i></td>`;
-            s
         }
     });
 

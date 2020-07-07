@@ -32,7 +32,11 @@ d3.csv("pokemon_go.csv", function(error, pokemonData) {
   if (error) throw error;
 
   // Format the data as numbers for each team
-
+  pokemonData.forEach(function(data) {
+    data.mystic = +data.mystic
+    data.valor = +data.valor
+    data.instinct = +data.instinct
+  })
    // Configure a band scale for the horizontal axis with a padding of 1
 
 

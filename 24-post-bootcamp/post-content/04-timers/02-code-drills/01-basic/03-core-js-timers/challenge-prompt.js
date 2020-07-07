@@ -3,16 +3,21 @@
 
 console.log("==================== Question 01 ====================");
 // Create a timer that creates an alert that says "Question 1" after 5 seconds
-
+function q1(){
+    alert("Q1")
+}
+setTimeout(q1,5000);
 
 
 console.log("==================== Question 02 ====================");
 // Create a timer that creates an alert that says "Question 2" after 15 seconds
-
-
+function q2(){
+    alert("Q2")
+}
+setTimeout(q2,15000);
 
 // Remove the timer you just made for Question 2
-
+clearTimeout(q2)
 
 
 console.log("==================== Question 03 ====================");

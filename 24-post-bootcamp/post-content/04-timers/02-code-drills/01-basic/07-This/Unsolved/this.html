@@ -25,9 +25,9 @@
 
       //  1. What will be console logged out? What is *this* in this case?
       console.log(this);
-
+      // the window
     };
-
+    
     outside();
 
     $("#button").on("click", function() {
@@ -35,7 +35,7 @@
       //  2. What will be console logged out? What is *this* in this case?
       console.log(this);
     });
-
+    // the button
     var bob = {
       firstName: "Bob",
       lastName: "Smith",
@@ -45,11 +45,12 @@
 
       //  3. Put something inside of the following function so that it works
       fullName: function() {
-
+        console.log(this.firstName + " " + this.lastName)
       }
     };
 
     //  4. What will the console log output if the next function gets called?
+    // console the object
     bob.whoIsBob();
 
     //  5. Fill in the code inside the fullName function above
@@ -59,8 +60,8 @@
 
     //  6. Make the "theChosenOne" function, log "Keanu Reeves"
     //     Our code goes below....
-
-
+    var firstName = "Keanu"
+    var lastName = "Reeves"
 
     //     Without editing any of the code below.
     //     Use only the properties in "this."
@@ -71,6 +72,7 @@
     };
 
     theChosenOne();
+    console.log(this)
 
     </script>
 

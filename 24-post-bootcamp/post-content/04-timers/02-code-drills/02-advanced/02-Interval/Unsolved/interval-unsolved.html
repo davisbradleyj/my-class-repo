@@ -33,7 +33,8 @@
     $("#resume").on("click", run);
 
     function run() { 
-    
+      // add a clearInterval, prevents multiple setIntervals
+      clearInterval(intervalId)
       intervalId = setInterval(decrement, 1000);
     }
 

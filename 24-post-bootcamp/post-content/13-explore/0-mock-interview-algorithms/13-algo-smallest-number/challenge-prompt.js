@@ -7,8 +7,10 @@ ignore values that aren't numbers
 Starter Code :*/
 function smallestNumber(arr) {
   // code starts here
-
+  let one =  
+  for (let i=0; i<arr.length; i++) {
   
+ 
 
 
 

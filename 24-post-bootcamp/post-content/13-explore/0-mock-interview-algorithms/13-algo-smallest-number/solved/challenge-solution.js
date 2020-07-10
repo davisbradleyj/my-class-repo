@@ -9,12 +9,16 @@ function smallestNumber(arr) {
 
   // code starts here
 
+  // smallest is 'nothing'
   var smallest = null;
-
+  // looping through the array
   for (var i=0; i<arr.length; i++){
+    // use typeof to determine what the array item it
     if (typeof arr[i] === 'number') {
+      // if there is no smallest number, assign it to smallest
       if (smallest === null) {
         smallest = arr[i];
+      // if there is a smallest number, compare the two through a math.min, and assign smallest value to 'smallest'
       } else {
         smallest = Math.min(smallest, arr[i]);
       }

@@ -2,7 +2,7 @@
 
 var productOfLargestTwo = function (arr) {
 
-    // bubble sort the array
+    // bubble sort the array, if arr.sort() is unacceptable
     // take last two array elements
     // find product
     let product = 0

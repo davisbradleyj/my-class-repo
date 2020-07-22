@@ -17,5 +17,4 @@ for (var i = 0; i < stuff; i++) {
     return randomValue
   }
 }
-};
 gen()

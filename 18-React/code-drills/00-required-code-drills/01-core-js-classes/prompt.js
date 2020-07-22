@@ -124,6 +124,7 @@ class Stack {
   peek() {
     return this.data[data.length-1]
   }
+}
 // ============= END WORK =============
 
 

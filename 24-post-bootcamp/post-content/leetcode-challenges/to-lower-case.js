@@ -5,5 +5,3 @@ var toLowerCase = function(str) {
     return newStr
 };
 
-// --- or ---
-

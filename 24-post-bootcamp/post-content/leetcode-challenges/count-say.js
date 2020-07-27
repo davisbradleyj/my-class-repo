@@ -4,35 +4,41 @@
 
 // Note: Each term of the sequence of integers will be represented as a string.
 
-var countAndSay = function(n) {
-    let result = '1';
-    for (let i=1; i<n; i++) {
-        result = say(result)
-        console.log("Passing through N: ",result)
-    }
-    return result
-};
-var say = function(string) {
-    console.log("Taking result: ", string)
-    let result = '';
+var countAndSay = function (n) {
+    let str = '1';
+    let temp = '';
+    let last = '';
     let count = 0;
-    let number = string[0];
-    for (let i=0; i<string.length; i++) {
-        console.log("Number: ",number)
-        console.log("String[i]: ",string[i])
-        if (string[i] === number) {
-            count++
-            console.log(count)
-        } else {
-            console.log("Else result: ", result)
-            console.log("Else count: ", count)
-            console.log("Else number: ", number)
-            result += count + string[i-1]
-            count = 1
-            number = string[i]
-        }
-    }
-    return result + count + number
-}
+    let len = 0;
 
-console.log(countAndSay(13))
+    for (var i = 1; i < n; i++) {
+        temp = '';
+        last = '';
+        count = 0;
+        len = str.length;
+
+        for (var j = 0; j < len; j++) {
+            if (last === '') {
+                last = str[j];
+                count = 1;
+                continue;
+            }
+            if (str[j] === last) {
+                count += 1;
+            } else {
+                temp += '' + count + last;
+                last = str[j];
+                count = 1;
+            }
+        }
+
+        if (last) {
+            temp += '' + count + last;
+        }
+        
+        str = temp;
+    }
+    return str;
+};
+
+console.log(countAndSay(5))

@@ -9,12 +9,14 @@
 // -------------------------------------------------------
 function factor(num) {
   // -------------------- Your Code Here --------------------
-
-
-  
-
-  
-  
+  let values = [];
+  for (let i=1; i<=num; i++) {
+    if (num % i == 0) {
+      values.push(i)
+    }
+  }
+  return values
+ 
   // --------------------- End Code Area --------------------
 }
 

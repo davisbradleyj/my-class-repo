@@ -4,7 +4,7 @@
 
 _Wait... No code???_
 
-Nope, no writing code for this exercise. Algorithms are about more than just writing code to automate tasks. On a deeper level, they're about reallu understanding problems, and breaking them down to their fundamental parts. Thinking about how to solve problems without worrying about syntax is good practice for thinking about algorithms at their conceptual level.
+Nope, no writing code for this exercise. Algorithms are about more than just writing code to automate tasks. On a deeper level, they're about really understanding problems, and breaking them down to their fundamental parts. Thinking about how to solve problems without worrying about syntax is good practice for thinking about algorithms at their conceptual level.
 
 ### Instructions
 
@@ -17,3 +17,11 @@ What's worse, if he leaves the chicken and fox alone together, the fox will eat 
 Using only the farmer's rickety boat and its rules, help him get across the river with all of his companions.
 
 There is no "trick" answer to this problem
+
+---> Farmer crosses with chicken
+<--- Farmer crosses alone
+---> Farmer crosses with fox
+<--- Farmer crosses with chicken
+---> Farmer crosses with grain
+<--- Farmer crosses alone
+---> Farmer crosses with chicken

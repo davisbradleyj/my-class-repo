@@ -95,7 +95,6 @@
         }
       });
 
-
       $(document).on("submit", ".event-form", function (event) {
         event.preventDefault()
 
@@ -103,12 +102,12 @@
         // If the assignments were outside the "submit" function, they would get the value of the forms whenever that 
         // code is run instead of when the user submits the form.
 
-        var paid ; // Grab the value of the #paid dropdown
-        var eventName  ; // Grab the value of the #eventName input
-        var location ; // Grab the value of the #location input
+        var paid = $('#paid').val(); // Grab the value of the #paid dropdown
+        var eventName = $('#eventName').val(); // Grab the value of the #eventName input
+        var location = $('#location').val(); // Grab the value of the #location input
 
         // Construct your query URL here using the values the user gave us.
-        queryURL = ''
+        queryURL = 'https://www.eventbriteapi.com/v3/events/?=' + eventName + '&price' + paid + '&location.address' + location + '&token=TEXS6XH2QT57C5E3WT'
 
         $.ajax({
           url: queryURL,
@@ -117,12 +116,12 @@
           // When dealing with a new API, always console log the response. 
           // This helps immensely with understanding what information is actually given to you
           console.log(response)
+          let events = response.events
 
           // Display the results in the appropriate element on the DOM
-
-
-
-
+          for (let i=0; i<events.length; i++) {
+            $('appendHere').append('<div class="eventPic-holder"><img src="' + events[i].logo.original.url + 'class="eventPic"></div><h1 class="eventName">'+events[i].name.text+'</h1><p class="eventText">'+events[i].description.text+'</p><hr>')
+          }
 
         });
       })

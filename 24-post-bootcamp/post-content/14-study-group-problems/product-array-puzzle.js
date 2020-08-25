@@ -42,3 +42,13 @@ function productExceptSelf(arr) {
 }
 
 console.log(productExceptSelf([2, 1, 5, 4, 3]))
+
+function prodArr1(arr) {
+  for (let i=0; i<arr.length; i++) {
+    if (arr[i] === 0) {
+      
+    }
+  }
+}
+
+// console.log(prodArr([1, 2, 3]))

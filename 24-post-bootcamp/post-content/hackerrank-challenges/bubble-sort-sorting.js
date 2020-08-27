@@ -20,3 +20,8 @@ function countSwaps(a) {
 // Array is sorted in 3 swaps.  
 // First Element: 1  
 // Last Element: 6 
+
+console.log((Math.round(Math.random() * -100))+101)
+// console.log((Math.round(Math.random() * 20))+1)
+// console.log((Math.round(Math.random() * 10))+1)
+// console.log((Math.round(Math.random() * 8))+1)

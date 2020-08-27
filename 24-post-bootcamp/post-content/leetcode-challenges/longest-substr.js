@@ -1,13 +1,22 @@
 var lengthOfLongestSubstring = function (s) {
-    let arr = s.split('')
-    if (arr.length == 1) {
-        return 1
+    let hold = []
+    let pointer = 0;
+    let count = 0;
+    if (s.length <= 1) {
+        return s.length
     }
-    if (arr.length == 2 && arr[0] == arr[1]) {
-        return arr[0] == arr[1] ? 1 : 2
-    }
-    // Still inprogress
+    for (let i = 0; i < s.length; i++) {
+        hold = s.substring(pointer, i)
+        if (hold.includes(s[i])) {
+            pointer += hold.indexOf(s[i]) + 1
+        }
+        hold = s.substring(pointer, i + 1)
+        if (count < hold.length) {
+            count = hold.length;
+        }
 
-  };
-  
-  lengthOfLongestSubstring("banana");
+    }
+    return count
+};
+
+console.log(lengthOfLongestSubstring("banana"));

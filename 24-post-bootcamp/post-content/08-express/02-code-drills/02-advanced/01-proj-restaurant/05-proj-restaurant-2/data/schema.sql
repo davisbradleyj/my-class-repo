@@ -5,12 +5,12 @@ USE restaurantsDB;
 CREATE TABLE restaurants (
 -- Use the definitions given in the README and the provided seed restaurants to fill out the schema for the restaurants table
 -------------------- Your Code Here --------------------
-
-
-
-
-
-
+restaurant_id INT(8) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+restaurant_name VARCHAR (50), 
+restaurant_link VARCHAR (125)
+restaurant_img VARCHAR (125), 
+restaurant_genre VARCHAR (125), 
+rating INT (100)
 --------------------- End Code Area --------------------
 );
 

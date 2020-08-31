@@ -10,8 +10,6 @@ var path = require("path")
 // Make queries to our mySQL database
 var mysql = require("mysql")
 
-
-
 // Define the connection parameters to the sql server
 var connection = mysql.createConnection({
   host: "localhost",

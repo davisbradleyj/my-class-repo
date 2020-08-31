@@ -26,13 +26,11 @@ function getNumVisits(arr) {
   var domainsAndCount = []
 
 
-  for (var i = 0 ; i < arr.length ; i++) {
+  for (var i = 0; i < arr.length; i++) {
     domainsAndCount.push(arr[i].split(" "))
   }
 
-  
-
-  for (var i = 0 ; i < domainsAndCount.length ; i++) {
+  for (var i = 0; i < domainsAndCount.length; i++) {
 
     var visits = parseInt(domainsAndCount[i][0])
     var domain = domainsAndCount[i][1]
@@ -40,11 +38,11 @@ function getNumVisits(arr) {
     //Seperate the domains into subdomains
     var subDomains = domain.split(".")
 
-    for (var j = 0 ; j < subDomains.length; j++) {
+    for (var j = 0; j < subDomains.length; j++) {
       //If the key doesn't exist, initialize it to the visit count
       if (!obj[subDomains[j]]) {
         obj[subDomains[j]] = visits
-        
+
         //Otherwise, add the number of visits to it
       } else {
         obj[subDomains[j]] += visits
@@ -57,7 +55,7 @@ function getNumVisits(arr) {
 
 }
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   var subDomains = getNumVisits(input)
   res.json(subDomains)
 })
@@ -66,6 +64,6 @@ app.get("/", function(req, res) {
 
 // Listener
 // ===========================================================
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });

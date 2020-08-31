@@ -1,0 +1,16 @@
+{
+  "name": "01-core-express",
+  "version": "1.0.0",
+  "description": "## How many times have we been here?",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT"
+}

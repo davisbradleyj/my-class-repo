@@ -1,6 +1,5 @@
 // Rate a restaurant server
 
-
 // Create our server and manage our routes
 var express = require("express");
 // More easily interact with the body of requests
@@ -9,8 +8,6 @@ var bodyParser = require("body-parser")
 var path = require("path")
 // Make queries to our mySQL database
 var mysql = require("mysql")
-
-
 
 // Define the connection parameters to the sql server
 var connection = mysql.createConnection({
@@ -26,8 +23,6 @@ connection.connect(function(err) {
   if (err) throw err
 })
 
-
-
 // Initialize express and set our port to 3002
 var app = express()
 var PORT = 3002
@@ -37,8 +32,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 //Serve up static assets from public
 app.use(express.static(__dirname + "/public"));
-
-
 
 //======================== HTML ========================
 // Serve up the index.html and add.html pages
@@ -50,8 +43,6 @@ app.use(express.static(__dirname + "/public"));
   res.sendFile(path.join(__dirname, "./public/add.html"))
  })
  // ===================================================
-
-
 
  // ====================== API ==========================
  // Provide API routes for our front end webpage to interact with our database
@@ -73,11 +64,7 @@ app.use(express.static(__dirname + "/public"));
   app.put("/api/restaurants/:id/rating/:value", function(req, res) {
     connection.query("UPDATE restaurants SET rating = ? WHERE restaurant_id = ?", [req.params.value,req.params.id])
   })
-
   // ===================================================
-
-
-
 
  // Set up a listener on the designated port for our app
 app.listen(PORT, function () {

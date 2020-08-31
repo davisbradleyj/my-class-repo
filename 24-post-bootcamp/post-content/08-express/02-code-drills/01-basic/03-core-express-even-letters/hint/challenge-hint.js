@@ -1,12 +1,11 @@
 // Require Express.js
-let express = require('express')
+let express = require('express');
 
 // Create our app
-let app = express()
+let app = express();
 
 // Define the port we're going to be listening on
-let PORT = '3700'
-
+let PORT = 3700;
 
 // This helper function takes in a string and returns all the letters of the
 // alphabet that appeared an even number of times within that string or didn't 
@@ -14,14 +13,14 @@ let PORT = '3700'
 function evenLetters(str) {
   // Define a string that contains all the letters of the alphabet
   // We will be using this later to determine the output
-
+  let letters = 'abcdefghijklmnopqrstuvwxyz'
   
   // Initialize an empty string for the output
-
+  let string = ''
   
   // Initialize an empty object that keeps track of the characters we've seen so far.
   // Characters we don't want displayed will have a value of true within this object
-
+  let hide = {}
   
   // Iterate through the argument string
   for (var i = 0; i < str.length; i++) {
@@ -30,27 +29,29 @@ function evenLetters(str) {
     // to indicate a character we do want to be be displayed. This way, characters 
     // not in the argument string will show up as a falsey value and characters we
     // want to be displayed will have a value of false within the object.
-    //
+      hide[str[i]] = !hide[str[i]]
     // We toggle whether we show the letter each time we encounter it, taking it
     // from false or falsey to indicate we should show the letter to true to indicate
     // we shouldn't show the letter and vice versa
-
-    
   }
 
   // Iterate through the alphabet string that we defined at the beginning of the
   // function and add all the letters with a false or falsey value to the output
-
-  
-
+  for (let j = 0; j<letters.length; j++) {
+    if (!hide[letters[j]]) {
+      string += letters[j]
+    }
+  }
   // Return the output
-
-  
+  return string
 }
 
 // Create a GET route that takes in a parameter from the route and calls on the
 // `evenLetters` helper function with the parameter as an argument
-
+app.get('/:str', function(req,res) {
+  let str = req.params.str;
+  res.json(evenLetters(str))
+})
 
 
 // Set up a listener for our app on the port we'd defined

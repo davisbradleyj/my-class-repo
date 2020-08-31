@@ -1,11 +1,11 @@
 // Require Express.js
-
+let express = require('express')
 
 // Create our app
-
+let app = express()
 
 // Define the port we're going to be listening on
-
+let PORT = '3700'
 
 
 // This helper function takes in a string and returns all the letters of the
@@ -54,5 +54,7 @@ function evenLetters(str) {
 
 
 // Set up a listener for our app on the port we'd defined
-
+app.listen(PORT, function () {
+  console.log("Listening on Port: " + PORT)
+})
 

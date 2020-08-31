@@ -8,7 +8,7 @@ var PORT = 3505;
 var sentence = "The quick brown apple dog jumped over the lazy fox"
 
 function pigLatin(sen) {
-// Stop our loop once it hits a vowel
+  // Stop our loop once it hits a vowel
   var alphabet = {
     "a": true,
     "b": false,
@@ -41,7 +41,7 @@ function pigLatin(sen) {
   //Split so we can manipulate each word individually
   var senArr = sen.toLowerCase().split(" ")
 
-  for (var i = 0 ; i < senArr.length ; i ++) {
+  for (var i = 0; i < senArr.length; i++) {
 
     var wordLength = senArr[i].length
 
@@ -52,31 +52,28 @@ function pigLatin(sen) {
       senArr[i].push("w")
     }
 
-    for (var j = 0 ; j < wordLength && !alphabet[senArr[i][j]]; j ++) {
+    for (var j = 0; j < wordLength && !alphabet[senArr[i][j]]; j++) {
 
-    //send the consonant to the back
+      //send the consonant to the back
       senArr[i].push(senArr[i][j])
-      
+
     }
 
     //remove the first consonants
-    senArr[i].splice(0,j)
+    senArr[i].splice(0, j)
+    
     //return to a string and append "ae"
-
-      senArr[i] = senArr[i].join("") + "ae"
-    
-    
-    
+    senArr[i] = senArr[i].join("") + "ae"
 
   }
 
   senArr = senArr.join(" ")
-  
+
   return (senArr)
 }
 
 
-app.get("/", function(req,res) {
+app.get("/", function (req, res) {
   //You can sen strings as JSON
   res.json(pigLatin(sentence))
 })
@@ -84,6 +81,6 @@ app.get("/", function(req,res) {
 
 // Listener
 // ===========================================================
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });

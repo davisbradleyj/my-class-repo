@@ -24,13 +24,25 @@
       }
 
       #parent-row-reverse-top {
+         display: flex;
+         align-items: flex-start;
+         justify-content: flex-start;
+         flex-direction: row-reverse;
       }
 
       #parent-row-reverse-bottom {
+         display: flex;
+         align-items: flex-end;
+         justify-content: flex-start;
+         flex-direction: row-reverse;
       }
 
       /***** BONUS: *****/
       #parent-row-reverse-left {
+         display: flex;
+         align-items: flex-start;
+         justify-content: flex-end;
+         flex-direction: row-reverse;
       }
 
       /* ======================================== */
@@ -69,7 +81,9 @@
                                              - space evenly
                                              - space-between
 
-      All of these properties allow us to control the horizontal and vertical alignment/positioning of elements within a parent element. But what if we want to control the DIRECTION of the children in an element. For this, Flexbox gives us the "flex-direction" CSS property.
+      All of these properties allow us to control the horizontal and vertical alignment/positioning of elements within a parent element. 
+      But what if we want to control the DIRECTION of the children in an element. 
+      For this, Flexbox gives us the "flex-direction" CSS property.
       
       If you open this HTML in your browser, you'll see that the two examples below have child elements that are organized in opposite directions. 
       

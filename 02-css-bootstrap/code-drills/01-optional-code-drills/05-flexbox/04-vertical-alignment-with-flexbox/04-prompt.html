@@ -19,15 +19,27 @@
       }
 
       #parent-vertical-center-left {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
       }
 
       #parent-vertical-center-right {
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
       }
       
       #parent-horizontal-center-top {
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
       }
       
       #parent-horizontal-center-bottom {
+         display: flex;
+         justify-content: center;
+         align-items: flex-end;
       }
 
       /* ======================================== */
@@ -58,11 +70,14 @@
 <body>
 
    <!--
-      We've seen the "justify-content" Flexbox property, which allows us to control horizontal positioning and/or spacing of elements. So how do we control the VERTICAL positioning and spacing??
+      We've seen the "justify-content" Flexbox property, which allows us to control horizontal positioning and/or spacing of elements. 
+      So how do we control the VERTICAL positioning and spacing??
 
-      Flexbox also gives us the "align-items" property, which can use all the same values (e.g. center, flex-start, flex-end, space-evenly, space-between) as the "justify-content" propery.
+      Flexbox also gives us the "align-items" property, which can use all the same values 
+      (e.g. center, flex-start, flex-end, space-evenly, space-between) as the "justify-content" propery.
 
-      If you open this HTML in your browser, you'll see the below child is positioned exactly in the center of the #parent-center element. This is because #parent-center has "justify-content: center" for horizontal centering AND "align-items: center" for vertical centering.
+      If you open this HTML in your browser, you'll see the below child is positioned exactly in the center of the #parent-center element. 
+      This is because #parent-center has "justify-content: center" for horizontal centering AND "align-items: center" for vertical centering.
    -->
    <h4>ALIGN-ITEMS EXAMPLE:</h4>
    <div id="parent-center" class="parent">
@@ -75,9 +90,8 @@
    <!--
       ***** YOUR WORK STARTS HERE *****
 
-      Only add CSS. You do not need to alter the HTML. When you are done, your site should look like 04-example-1-image.png and 04-example-2-image.png.
-
-
+      Only add CSS. You do not need to alter the HTML. 
+      When you are done, your site should look like 04-example-1-image.png and 04-example-2-image.png.
       Apply Flexbox properties to #parent-vertical-center-left. The child should be vertically centered on the left side of its parent.
    -->
    <h4>VERTICALLY CENTERED (LEFT SIDE):</h4>
@@ -86,7 +100,6 @@
          I want to be vertically centered on the left side!
       </div>
    </div>
-
 
    <!--
       Apply a mixture of the flexbox properties you have learned so far to position the child of #parent-vertical-center-right as follows:

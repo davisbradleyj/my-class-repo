@@ -11,9 +11,11 @@
    /* 
       DIRECTIONS
       ----------
-      If you open this HTML in your browser, you'll see a series of boxes stacked on top of each other. Your task is to apply a combination of many of the Flexbox properties you've learned to make this HTML match the layout in 10-example-image.png.
+      If you open this HTML in your browser, you'll see a series of boxes stacked on top of each other. 
+      Your task is to apply a combination of many of the Flexbox properties you've learned to make this HTML match the layout in 10-example-image.png.
 
-      Inside /solved/10-solved.html, there are detailed explanations of each style that should be applied. If you get stuck or are not sure where to begin, feel free to read a couple of the style descriptions to get started.
+      Inside /solved/10-solved.html, there are detailed explanations of each style that should be applied. 
+      If you get stuck or are not sure where to begin, feel free to read a couple of the style descriptions to get started.
 
       ONLY USE THE FLEXBOX PROPERTIES LISTED BELOW. YOU WILL NOT NEED TO USE ANY OTHER CSS PROPERTIES TO COMPLETE THIS EXERCISE.
 
@@ -41,9 +43,57 @@
 
       /* APPLY YOUR CSS HERE */
       /* ======================================== */
+      nav {
+         display: flex;
+         justify-content: space-between;
+      }
 
+      main {
+         display: flex;
+      }
 
+      section {
+         flex: 7;
+         display: flex;
+         flex-direction: column;
+      }
 
+      article {
+         display: flex;
+         flex-direction: column;
+         flex: 1;
+      }
+
+      article div {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex: 1;
+      }
+
+      aside {
+         flex: 3;
+         display: flex;
+         flex-direction: column;
+      }
+
+      aside div {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      #aside-1 {
+         flex: 1;
+      }
+
+      #aside-2 {
+         flex: 4;
+      }
+
+      #aside-3 {
+         flex: 1;
+      }
       /* ======================================== */
       
    </style>

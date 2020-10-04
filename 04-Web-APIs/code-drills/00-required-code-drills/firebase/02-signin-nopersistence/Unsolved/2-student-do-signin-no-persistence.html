@@ -83,7 +83,7 @@
   <script type="text/javascript">
     // ========================================= START CODING BELOW!
     // Capture Button Click
-    $("#add-user").on("click", function(event) {
+    $("#add-user").on("click", function (event) {
       event.preventDefault();
       // Capture User Inputs and store them into variables
       var name = $("#name-input").val().trim();
@@ -92,14 +92,36 @@
       var comments = $("#comment-input").val().trim();
 
       // Console log each of the user inputs to confirm we are receiving them correctly
-      console.log(name,email,age,comments);
+      console.log(name, email, age, comments);
+
+      // Clear absolutely everything stored in localStorage using localStorage.clear()
+      localStorage.clear();
 
       // Output all of the new information into the relevant HTML sections
-      $("#name-display").text(name);
-      $("#email-display").text(email);
-      $("#age-display").text(age);
-      $("#comment-display").text(comments);
+      // $("#name-display").text(name);
+      // $("#email-display").text(email);
+      // $("#age-display").text(age);
+      // $("#comment-display").text(comments);
+
+      // Store the username into localStorage using "localStorage.setItem"
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("age", age);
+      localStorage.setItem("comments", comments);
+
+      // And display that name for the user using "localStorage.getItem"
+      $("#name-display").text(localStorage.getItem("name"));
+      $("#email-display").text(localStorage.getItem("email"));
+      $("#age-display").text(localStorage.getItem("age"));
+      $("#comment-display").text(localStorage.getItem("comments"));
+
     });
+
+    // By default (upon load) show the name stored in localStorage using "localStorage.getItem"
+    $("#name-display").text(localStorage.getItem("name"));
+    $("#email-display").text(localStorage.getItem("email"));
+    $("#age-display").text(localStorage.getItem("age"));
+    $("#comment-display").text(localStorage.getItem("comments"));
 
   </script>
 

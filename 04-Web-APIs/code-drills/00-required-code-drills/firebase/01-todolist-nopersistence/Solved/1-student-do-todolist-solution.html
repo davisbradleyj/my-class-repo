@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <title>To Do App!</title>
+  <meta charset="UTF-8">
+  <title>To Do App!</title>
 
-    <style>
-      #todo-item {
-        font-weight: 700;
-        font-size: 2em;
-      }
-    </style>
-  </head>
+  <style>
+    #todo-item {
+      font-weight: 700;
+      font-size: 2em;
+    }
+  </style>
+</head>
 
-  <body>
+<body>
 
-    <!-- Title -->
-    <h1>My To Do's!</h1>
+  <!-- Title -->
+  <h1>My To Do's!</h1>
 
-    <!-- Input Form -->
-    <form>
-      <span id="todo-item">To Do Item: <input id="to-do" type="text" ><input id="add-to-do" value="Add Item" type="submit"></span>
-    </form>
+  <!-- Input Form -->
+  <form>
+    <span id="todo-item">To Do Item: <input id="to-do" type="text"><input id="add-to-do" value="Add Item"
+        type="submit"></span>
+  </form>
 
-    <hr>
+  <hr>
 
-    <!-- To-Do List -->
-    <div id="to-dos">
-      
-    </div>
+  <!-- To-Do List -->
+  <div id="to-dos"></div>
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Script -->
+  <!-- Script -->
 
-    <script type="text/javascript">
+  <script type="text/javascript">
 
     // Create an initial toDoCount variable
     var toDoCount = 0;
 
     //  On Click event associated with the add-to-do function
-    $("#add-to-do").on("click", function(event) {
+    $("#add-to-do").on("click", function (event) {
       event.preventDefault();
 
       // Get the to-do "value" from the textbox and store it a variable
@@ -62,7 +61,6 @@
       // Lastly add a checkmark inside.
 
       var toDoClose = $("<button>");
-
       toDoClose.attr("data-to-do", toDoCount);
       toDoClose.addClass("checkbox");
       toDoClose.text("x");
@@ -83,7 +81,7 @@
     // When a user clicks a check box then delete the specific content
     // (NOTE: Pay attention to the unusual syntax here for the click event.
     // Because we are creating click events on "dynamic" content, we can't just use the usual "on" "click" syntax.)
-    $(document.body).on("click", ".checkbox", function() {
+    $(document.body).on("click", ".checkbox", function () {
 
       // Get the number of the button from its data attribute and hold in a variable called  toDoNumber.
       var toDoNumber = $(this).attr("data-to-do");
@@ -94,8 +92,8 @@
       $("#item-" + toDoNumber).remove();
     });
 
-    </script>
+  </script>
 
-  </body>
+</body>
 
 </html>

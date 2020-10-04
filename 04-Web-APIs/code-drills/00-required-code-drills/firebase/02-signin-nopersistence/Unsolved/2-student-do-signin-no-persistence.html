@@ -95,7 +95,10 @@
       console.log(name, email, age, comments);
 
       // Clear absolutely everything stored in localStorage using localStorage.clear()
-      localStorage.clear();
+      // localStorage.clear();
+
+      // Clear absolutely everything stored in sessionStorage using sessoinStorage.clear()
+      sessionStorage.clear();
 
       // Output all of the new information into the relevant HTML sections
       // $("#name-display").text(name);
@@ -103,25 +106,43 @@
       // $("#age-display").text(age);
       // $("#comment-display").text(comments);
 
-      // Store the username into localStorage using "localStorage.setItem"
-      localStorage.setItem("name", name);
-      localStorage.setItem("email", email);
-      localStorage.setItem("age", age);
-      localStorage.setItem("comments", comments);
+      // // Store the username into localStorage using "localStorage.setItem"
+      // localStorage.setItem("name", name);
+      // localStorage.setItem("email", email);
+      // localStorage.setItem("age", age);
+      // localStorage.setItem("comments", comments);
+
+      // Store the username into sessionStorage using "sessionStorage.setItem"
+      sessionStorage.setItem("name", name);
+      sessionStorage.setItem("email", email);
+      sessionStorage.setItem("age", age);
+      sessionStorage.setItem("comments", comments);
 
       // And display that name for the user using "localStorage.getItem"
-      $("#name-display").text(localStorage.getItem("name"));
-      $("#email-display").text(localStorage.getItem("email"));
-      $("#age-display").text(localStorage.getItem("age"));
-      $("#comment-display").text(localStorage.getItem("comments"));
+      // $("#name-display").text(localStorage.getItem("name"));
+      // $("#email-display").text(localStorage.getItem("email"));
+      // $("#age-display").text(localStorage.getItem("age"));
+      // $("#comment-display").text(localStorage.getItem("comments"));
+
+      // And display that name for the user using "sessionStorage.getItem"
+      $("#name-display").text(sessionStorage.getItem("name"));
+      $("#email-display").text(sessionStorage.getItem("email"));
+      $("#age-display").text(sessionStorage.getItem("age"));
+      $("#comment-display").text(sessionStorage.getItem("comments"));
 
     });
 
     // By default (upon load) show the name stored in localStorage using "localStorage.getItem"
-    $("#name-display").text(localStorage.getItem("name"));
-    $("#email-display").text(localStorage.getItem("email"));
-    $("#age-display").text(localStorage.getItem("age"));
-    $("#comment-display").text(localStorage.getItem("comments"));
+    // $("#name-display").text(localStorage.getItem("name"));
+    // $("#email-display").text(localStorage.getItem("email"));
+    // $("#age-display").text(localStorage.getItem("age"));
+    // $("#comment-display").text(localStorage.getItem("comments"));
+
+    // By default (upon load) show the name stored in localStorage using "sessionStorage.getItem"
+    $("#name-display").text(sessionStorage.getItem("name"));
+    $("#email-display").text(sessionStorage.getItem("email"));
+    $("#age-display").text(sessionStorage.getItem("age"));
+    $("#comment-display").text(sessionStorage.getItem("comments"));
 
   </script>
 

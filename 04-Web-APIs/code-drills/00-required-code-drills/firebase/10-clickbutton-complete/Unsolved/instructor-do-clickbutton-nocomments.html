@@ -5,25 +5,25 @@
   <title>Click Button with Firebase!</title>
 </head>
 <body>
-  <!-- -->
+  <!-- span id containing the text information entered-->
   <h1>Ouch! You've clicked me
     <span id="click-value"></span> times!</h1>
 
-  <!-- -->
+  <!-- button -->
   <button id="click-button">Click Me!!!!</button>
 
-  <!-- -->
+  <!-- jquery tag-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!--  -->
+  <!-- firebase corejs link -->
   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
 
-  <!-- -->
+  <!-- firebase product utilized for database -->
   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
   <!-- ================================================================================== -->
   <script>
-
+    // copied text to initialize firebase
     var firebaseConfig = {
       apiKey: "AIzaSyDBLmXhkbnFXUU61B0SCBRX1d7sFL_k87A",
       authDomain: "class-demo-b7f73.firebaseapp.com",
@@ -33,21 +33,25 @@
       messagingSenderId: "652912100467",
       appId: "1:652912100467:web:17d9589c091e13bb66d606"
     };
-
+    // firebase initialization
     firebase.initializeApp(config);
 
     // VARIABLES
     // --------------------------------------------------------------------------------
 
+    // reference the firebase database and instantiate a click counter at 0
     var database = firebase.database();
     var clickCounter = 0;
 
     // FUNCTIONS + EVENTS
     // --------------------------------------------------------------------------------
 
+    // on click listener for id 'click button'
     $("#click-button").on("click", function() {
+      // add 1 to clickCounter
       clickCounter++;
 
+      // store click data to firebase through clickCount variable using .set method
       database.ref().set({
         clickCount: clickCounter
       });
@@ -56,13 +60,18 @@
     // MAIN PROCESS + INITIAL CODE
     // --------------------------------------------------------------------------------
 
+    // value retreival from firebase database in the variable snapshot
     database.ref().on("value", function(snapshot) {
+      // console log the current value for snapshot
       console.log(snapshot.val());
-
+      // update clickCounter with the value of snapshot
       clickCounter = snapshot.val().clickCount;
 
+      // change the value of the html on the page of the clickCount
       $("#click-value").text(snapshot.val().clickCount);
+      // store any error in 'erroObject'
     }, function(errorObject) {
+      // then print to the console
       console.log("The read failed: " + errorObject.code);
     });
 

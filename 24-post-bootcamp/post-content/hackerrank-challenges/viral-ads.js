@@ -5,23 +5,27 @@
 // At the beginning of the second day, (floor(5/2) X 3 (2 X 3) = 6)  people receive the advertisement.
 
 // Each day, (Floor (recipients)/2) of the recipients like the advertisement and will share it with 3 friends on the following day. 
-// Assuming nobody receives the advertisement twice, determine how many people have liked the ad by the end of a given day, beginning with launch day as day 1.
+// Assuming nobody receives the advertisement twice, determine how many people have recipients the ad by the end of a given day, beginning with launch day as day 1.
 
 function viralAdvertising(n) {
-    let shared = 5
-    let liked = Math.floor(shared/2)
-    console.log("liked: ",liked)
-    let sum = liked
-    console.log(sum)
-    for (let i=1; i<=n; i++) {
-            shared = liked*3
-            console.log("liked: ",liked)
-            console.log("shared: ",shared)
-            sum += liked
-            console.log("liked: ",liked)
-            console.log("sum: ",sum)
+    let recipients = Math.floor(5/2)
+    // 2
+    // console.log("recipients: ",recipients)
+    let sum = recipients
+    // 2
+    // console.log(sum)
+    for (let i=2; i<=n; i++) {
+        let shared = recipients*3
+        recipients = Math.floor(shared/2)
+        // console.log("recipients: ",recipients)
+        // console.log("shared: ",shared)
+        sum += recipients
+        // console.log("recipients: ",recipients)
+        // console.log("sum: ",sum)
     }
     return sum
 }
 
 console.log(viralAdvertising(3))
+console.log(viralAdvertising(4))
+console.log(viralAdvertising(5))

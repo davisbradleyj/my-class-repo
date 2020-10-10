@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>jQuery Click Listeners</title>
-</head>
-
-<body>
-
-
-
-  <script>
 
     console.log("==================== Question 01 ====================");
     // Create a function called `numberGuess` that takes in an integer as an argument. 
@@ -24,7 +9,7 @@
       } else {
         console.log(false);
       }
-
+    }
     // --------- code ends --------------
       
     // This is here to help you test your code
@@ -38,15 +23,18 @@
 
     console.log("==================== Question 02 ====================");
 
-    // Write a function that takes in an array of numbers. the function should console.log the smallest number in the given array
+    // Write a function that takes in an array of numbers. 
+    // The function should console.log the smallest number in the given array
 
     function findSmallest(arr) {
     // --------- code starts --------------
       var smallNum = arr[0];
-        for (var i = 1; i < arr.length - 1; i++)
-
-
-
+        for (var i = 1; i < arr.length - 1; i++) {
+          if (arr[i] < smallNum){
+            smallNum = arr[i]
+          }
+        }
+      console.log(smallNum)
     // --------- code ends --------------
     }
 
@@ -55,15 +43,19 @@
     findSmallest(nums);
 
     console.log("==================== Question 03 ====================");
-    // Write a function which takes in an array of strings. The function should console.log the shortest string in the array.
+    // Write a function which takes in an array of strings. 
+    // The function should console.log the shortest string in the array.
     //
 
     function findShortest(arr){
     // --------- code starts --------------
-
-
-
-
+      var shortest = arr[0].length;
+      for (let i=1; i<arr.length; i++) {      
+        if (arr[i].length < shortest) {
+          shortest = arr[i].length
+        }
+      }
+      console.log(shortest)
 
     // --------- code ends --------------
     }
@@ -81,11 +73,13 @@
 
     function filterArray(high, low, arr){
     // --------- code starts --------------
-
-
-
-
-
+      let hold = []
+      for (let i=0; i<arr.length; i++) {
+        if (arr[i] <= high && arr[i] >= low) {
+          hold.push(arr[i])
+        }
+      }
+      console.log(hold)
     // --------- code ends --------------
     }
 
@@ -94,10 +88,5 @@
     var up = 20;
     var arr = [2,5,99,15,23,18,11,21];
 
-    innerBound(up, down, arr);
+    filterArray(up, down, arr);
 
-
-  </script>
-</body>
-
-</html>

@@ -88,10 +88,5 @@ $(document).ready(function () {
     });
     $(docuemnt).on("click", "letterZ", function () {
         $("text-div").append("Z");
-    }
-    
-
-
-
-        
+    })
 })

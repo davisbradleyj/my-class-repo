@@ -125,7 +125,7 @@ var counter = 1;
 
 function count() {
   if (counter >= 5){
-    return this.counter;
+    return this.count();
   } else if (counter % 2 === 0) {
     console.log("Even ", counter);
     counter++;
@@ -143,7 +143,7 @@ console.log("==================== Question 09 ====================");
 // Even 2
 // Odd 3
 // Even 4
-count();
+
 
 
 function countWrapper() {

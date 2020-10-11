@@ -31,18 +31,21 @@ console.log("==================== Question 01 ====================");
 // What is the value of `this.name`?
 // 
 
+console.log(this.name)
+
 
 
 console.log("==================== Question 02 ====================");
 // What is the value of california.name?
-//
+// California
 
-
+console.log(california.name)
 
 console.log("==================== Question 03 ====================");
 // What does `california.getName()` return?
-//
+// California
 
+console.log(california.getName());
 
 
 // We are passing the getName method from california to stateCall as a callback function
@@ -54,8 +57,8 @@ function stateCall(callback) {
 
   console.log("==================== Question 04 ====================");
   // What is the value of `location`?
-  //
-
+  // California / undefined
+  console.log(location)
 }
 
 
@@ -66,7 +69,9 @@ console.log("==================== Question 05 ====================");
 
 // ================ Your code here ================
 
-
+california.getCap = function() {
+  return this.capital
+}
 
 
 
@@ -74,16 +79,16 @@ console.log("==================== Question 05 ====================");
 
 // console log the return value of your method here
 
-
+console.log(california.getCap())
 // end of console log area
 
 
 
 console.log("==================== Question 06 ====================");
 // what does `california.sanfrancisco.getName()` return?
-//
+// San Francisco
 
-
+console.log(california.sanfrancisco.getName())
 
 
 // We are passing the getName method to cityCall as a callback function
@@ -95,8 +100,9 @@ function cityCall(callback) {
 
   console.log("==================== Question 07 ====================");
   // What is the value of `location`?
-  //
+  // undefined
 
+  console.log(location)
 }
 
 
@@ -107,9 +113,9 @@ function getName() {
 
 console.log("==================== Question 08 ====================");
 // What does `getName()` return?
-// 
+// undefined
 
-
+console.log(getName());
 
 var counter = 1;
 
@@ -129,10 +135,13 @@ function count() {
       break;
   }
 }
-
+console.log(count());
 console.log("==================== Question 09 ====================");
 // If we execute `count()` what does it console log out?
-//
+// Odd 1
+// Even 2
+// Odd 3
+// Even 4
 
 
 

@@ -19,7 +19,7 @@ console.log(minimumAbsoluteDifference([1,-3,71,68,17]))
 console.log(minimumAbsoluteDifference([-59,-36,-13,1,-53,-92,-2,-96,-54,75]))
 
 function minAbsDiff(arr) {
-  minDiff = Infinity;
+  let minDiff = Infinity;
   arr.sort(function(a, b) {
     minDiff = Math.min(minDiff, Math.abs(a - b));
     return a - b;

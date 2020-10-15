@@ -18,7 +18,25 @@ var containsDuplicate = function (nums) {
   return false
 };
 
-console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
-console.log(containsDuplicate([1, 4, 3, 2]))
-console.log(containsDuplicate([2, 14, 18, 22, 22]))
-console.log(containsDuplicate([]))
+// console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
+// console.log(containsDuplicate([1, 4, 3, 2]))
+// console.log(containsDuplicate([2, 14, 18, 22, 22]))
+// console.log(containsDuplicate([]))
+
+var containsDuplicates = function (nums) {
+  const hashMap = {};
+  for (let i = 0; i < nums.length; i++){
+    if (!hashMap[nums[i]]) {
+      hashMap[nums[i]] = true;
+      console.log(hashMap);
+    } else {
+      return true;
+    }
+  }
+  return false
+};
+
+console.log(containsDuplicates([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
+console.log(containsDuplicates([1, 4, 3, 2]))
+console.log(containsDuplicates([2, 14, 18, 22, 22]))
+console.log(containsDuplicates([]))

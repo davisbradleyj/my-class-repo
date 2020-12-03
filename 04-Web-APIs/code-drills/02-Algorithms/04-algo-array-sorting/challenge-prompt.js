@@ -11,9 +11,6 @@
 // -------------------- Your Code Here --------------------
 
 
-
-
-
 // --------------------- End Code Area --------------------
 
 
@@ -22,14 +19,23 @@
 // -------------------------------------------------------
 function upDownSort(arr) {
   // -------------------- Your Code Here --------------------
-
-
-
-
-
+  let array = [];
+  let even = [];
+  let odd = [];
+  for (let i=0; i<arr.length; i++) {
+    if (i % 2 === 0) {
+      even.push(arr[i])
+    } else {
+      odd.push(arr[i])
+    }
+  }
+  // console.log(even,odd);
+  even.sort((a,b) => a-b);
+  odd.sort((a,b) => b-a);
+  array.push(...even,...odd);
+  return array;
   // --------------------- End Code Area --------------------
 }
-
 
 // ------------------------------------------------------------------
 console.log("==================== Test 01 ====================");

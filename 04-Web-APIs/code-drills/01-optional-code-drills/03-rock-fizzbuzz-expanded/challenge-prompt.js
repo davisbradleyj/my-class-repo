@@ -18,7 +18,7 @@
 
 // This method just wraps our `fizzBuzzDataTypeChecker` call. You will not need to edit this function
 function fizzBuzzSuper(dataTypeInput){
-  izzBuzzDataTypeChecker(dataTypeInput);
+  fizzBuzzDataTypeChecker(dataTypeInput);
 }
 
 // This method should evaluate what the data type is and send it to the appropriate method
@@ -31,31 +31,36 @@ function fizzBuzzDataTypeChecker(dataTypeInput){
 
 
     //if the argument is an array then call the `dataTypeArray` function with it as an argument
-
-
+  if (dataTypeInput instanceof Array) {
+    dataTypeArray(dataTypeInput);
+    
     //if the argument is an obj then call the `dataTypeObj` function with it as an argument
-
-
+  } else if (dataTypeInput instanceof Object) {
+    dataTypeObject(dataTypeInput)
+      
     //if the argument is a string then call the `customIsNum` function with it as an argument to see if the string can be converted to an integer
-
-
-      //if the string argument can be converted into an integer then call the `fizzBuzzCalculation` function with it converted to an integer as an argument
-
+  } else if (typeof dataTypeInput === 'string') {
+     
+    //if the string argument can be converted into an integer then call the `fizzBuzzCalculation` function with it converted to an integer as an argument
+    if (customIsNum(dataTypeInput)) {
+      fizzBuzzCalculation(parseInt(dataTypeInput));
 
       //if the string argument cannot be converted into an integer then call the `consoleLogNonNumber` function with it as an argument
-
+    } else {
+      consoleLogNonNumber(dataTypeInput);
+    }
 
     //if the argument is an integer, then call the `fizzBuzzCalculation` function with it as an argument
-
-    
+  } else if (typeof dataTypeInput === 'number') {
+    fizzBuzzCalculation(dataTypeInput);
+   
     //if the argument is a boolean, then call the `consoleLogNonNumber` function with it as an argument
-
-
+  } else {
+    consoleLogNonNumber(dataTypeInput);
+  }
 
    // ----------- End Code Area -----------
 }
-
-
 
 // this method takes as an array as the argument and iterates through it and
 // sends each element to the `fizzBuzzDataTypeChecker` method we just defined.
@@ -67,15 +72,11 @@ function fizzBuzzDataTypeChecker(dataTypeInput){
 // function
 function dataTypeArray(dataTypeInput){
   // ---------- Your Code Here ----------
-
-
-
-
-
-
+  for (let i=0; i<dataTypeInput.length; i++) {
+    fizzBuzzDataTypeChecker(dataTypeInput[i])
+  }
   // ----------- End Code Area -----------
 }
-
 
 // This method takes as an argument an object and iterates through the keys and 
 // sends each value to the `fizzBuzzDataTypeChecker` method
@@ -83,17 +84,13 @@ function dataTypeArray(dataTypeInput){
 // Much like the method we just defined for arrays. We don't know
 // the type of elements within the object, so we'll have to send it all to our
 // type checker method
-function dataTypeObj(dataTypeInput){
+function dataTypeObject(dataTypeInput){
   // ---------- Your Code Here ----------
-
-
-
-
-
-
+  for (let key in dataTypeInput) {
+    fizzBuzzDataTypeChecker(dataTypeInput[key])
+  }
   // ----------- End Code Area -----------
 }
-
 
 // This method takes in an integer and evaluates whether to replace it with
 // "Fizz", "Buzz", or both. It will console log either the replacement string
@@ -104,15 +101,17 @@ function dataTypeObj(dataTypeInput){
 // within our iterations
 function fizzBuzzCalculation(input){
   // ---------- Your Code Here ----------
-
-
-
-
-
-
+  if ((input % 3 === 0) && (input % 5 === 0)) {
+    console.log("FizzBuzz")
+  } else if (input % 5 === 0) {
+    console.log("Buzz")
+  } else if (input % 3 === 0) {
+    console.log("Fizz")
+  } else {
+    console.log(input)
+  }
   // ----------- End Code Area -----------
 }
-
 
 // This method takes in the argument and simply console logs both the argument 
 // and a message that tells the user that the argument wasn't a number. For example:
@@ -122,15 +121,9 @@ function fizzBuzzCalculation(input){
 // where {input} is replaced by the value of the argument given to `consoleLogNonNumber`
 function consoleLogNonNumber(input){
   // ---------- Your Code Here ----------
-
-
-
-
-
-
+  console.log(input + " IS NOT A NUMBER")
   // ----------- End Code Area -----------
 }
-
 
 // This method is provided for you. It takes in an argument and returns
 // true if it is an integer and false otherwise

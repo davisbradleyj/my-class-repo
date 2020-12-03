@@ -9,10 +9,14 @@
 //                Helper Functions (Optional)
 //
 // -------------------- Your Code Here --------------------
-
-
-
-
+function isPrime(num) {
+  for (let i = 2; i <= num/i; i++){
+    if (num % i === 0) {
+      return false
+    }
+  }
+  return true;
+}
 
 // --------------------- End Code Area --------------------
 
@@ -22,11 +26,13 @@
 // -------------------------------------------------------
 function primeSort(arr) {
   // -------------------- Your Code Here --------------------
-
-
-
-
-
+  let primeNum =[];
+  for (let i=0; i<arr.length; i++) {
+    if (isPrime(arr[i])) {
+      primeNum.push(arr[i])
+    }
+  }
+  return primeNum.sort((a,b)=>b-a);
   // --------------------- End Code Area --------------------
 }
 

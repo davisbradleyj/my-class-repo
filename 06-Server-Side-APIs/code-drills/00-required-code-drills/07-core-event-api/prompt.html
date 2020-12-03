@@ -118,9 +118,11 @@
           console.log(response)
           var events = response.events
           // Display the results in the appropriate element on the DOM
-          
-
-
+          for (let i=0; i < response.events.length; i++) {
+            console.log(i)
+            $(".appendHere").append(
+              '<div class="eventPic-holder">\n<img src="'+ response.events[i].logo.original.url+'" class="eventPic"></div><h1 class="eventName">'+response.events[i].name.text+'</h1><p class="eventText">'+response.events[i].description.text+'</p><hr>')
+          }
 
 
         });

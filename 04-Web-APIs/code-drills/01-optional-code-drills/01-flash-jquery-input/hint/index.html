@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Practice with forms</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Link Bootstrap so we can use their nice looking forms and buttons! -->
-  
-  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
+
 <body>
   <h1>Practice with forms</h1>
-  <!-- Create a display area to display the user data -->
-
-
-
-  <!-- Create a form with individual fields for the user's First Name, Last Name, Occupation, City, and State -->
-  <!-- Remember to give each of the input areas a unique id so we can easily pull the values off the forms -->
-
-
+  <div class="container">
+    <!-- Create a display area to display the user data -->
+    <div class="row mt-3 mb-1">
+      <div class="col-sm-12 text-center" id="display"></div>
+    </div>
+    <!-- Create a form with individual fields for the user's First Name, Last Name, Occupation, City, and State -->
+    <!-- Remember to give each of the input areas a unique id so we can easily pull the values off the forms -->
+    <div class="row">
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-8">
+        <form>
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName">
+            <label for="job">Occupation</label>
+            <input type="text" class="form-control" id="job">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state">
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+        </form>
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div> 
+    
   
+    
+  </div>
   <!-- Link jQuery so we can interact with the DOM easily -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous">
+    </script>
 
-  
   <!-- Link our javascript file -->
-
+  <script src="challenge-prompt.js"></script>
 
 </body>
+
 </html>

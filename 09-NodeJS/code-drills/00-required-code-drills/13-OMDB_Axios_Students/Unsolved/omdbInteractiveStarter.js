@@ -9,10 +9,10 @@
 
 // Include the axios npm package (Don't forget to run "npm install axios" in this folder first!)
 // ...
-
+const axios = require("axios");
 
 // Grab or assemble the movie name and store it in a variable called "movieName"
-var movieName = "";
+let movieName = process.argv[2]
 // ...
 
 
@@ -26,9 +26,29 @@ console.log(queryUrl);
 
 // Then create a request with axios to the queryUrl
 // ...
+axios.get(queryUrl)
 
 // If the request with axios is successful
 // ...
-
-// Then log the Release Year for the movie
-// ...
+  .then(
+  function(res) {
+    // Then log the Release Year for the movie
+    // ...
+    console.log(res);
+    console.log("Release year: " + res.data.Year);
+  })
+  .catch(
+    function(err){
+      if (err.res) {
+        console.log(err.res.data);
+        console.log(err.res.status);
+        console.log(err.res.headers);
+      } else if (err.req) {
+        console.log(err.req)
+      } else {
+        console.log("Error: ", err.message);
+      }
+      console.log(err.config)
+    }
+    )  
+    

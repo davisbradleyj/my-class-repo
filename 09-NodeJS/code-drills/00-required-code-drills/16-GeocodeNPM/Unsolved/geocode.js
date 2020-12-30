@@ -21,12 +21,8 @@ var options = {
 // Create a geocoder object that can query the mapquest API
 var geocoder = NodeGeocoder(options);
 
-// Take in the command line arguments
-let city = process.argv[2];
-let state = process.argv[3];
-
 // Build your address as an array or string
-let address = city + " " + state;
+let address = process.argv.slice(2).join(" ");
 
 // Then use the geocoder object to search the address
 geocoder.geocode(address, function (error, data) {

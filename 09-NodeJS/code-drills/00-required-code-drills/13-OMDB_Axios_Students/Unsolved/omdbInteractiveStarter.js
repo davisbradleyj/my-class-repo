@@ -10,9 +10,24 @@
 // Include the axios npm package (Don't forget to run "npm install axios" in this folder first!)
 // ...
 const axios = require("axios");
+const fs = require("fs");
 
 // Grab or assemble the movie name and store it in a variable called "movieName"
-let movieName = process.argv[2]
+let args = process.argv;
+let movieName = "";
+for (let i = 2; i < args.length; i++) {
+  if (i < args.length && i > 2) {
+    movieName = movieName + "+" + args[i];
+  } else {
+    movieName += args[i]
+  }
+}
+console.log(movieName)
+fs.appendFile("movies.txt", movieName+ ", ", function(err) {
+  if (err) {
+    return console.log(err);
+  }
+});
 // ...
 
 
@@ -21,7 +36,7 @@ var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey
 
 
 // This line is just to help us debug against the actual URL.
-console.log(queryUrl);
+// console.log(queryUrl);
 
 
 // Then create a request with axios to the queryUrl
@@ -34,7 +49,7 @@ axios.get(queryUrl)
   function(res) {
     // Then log the Release Year for the movie
     // ...
-    console.log(res);
+    console.log(res.data);
     console.log("Release year: " + res.data.Year);
   })
   .catch(

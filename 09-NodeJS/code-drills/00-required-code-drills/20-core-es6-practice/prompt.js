@@ -21,7 +21,13 @@ const animals = {
 
 
 // ============ YOUR WORK HERE ===========
-
+animalTypes = () => {
+  const names = Object.keys(animals)
+  names.map(animal => {
+    console.log(`${animal}: ${names[animal]}`)
+  })
+}
+animalTypes()
 
 
 
@@ -32,26 +38,19 @@ const animals = {
 
 // 2. Write the below function IN ONE LINE OF CODE. Call the new function "addStrings1"
 // ES5
-function addStrings(str1, str2) {
+function addStrings1(str1, str2) {
   return str1 + str2
 }
 
-
 // ============ YOUR WORK HERE ===========
 
-
-
-
+addStrings2 = (str1, str2) => str1 + str2
 
 //  ============== END WORK ==============
-
 
 console.log(addStrings("hello", " there"))
 
 console.log(addStrings1("hello", " there"))
-
-
-
 
 
 // 3. In one line of code, invoke the function below, passing in two numbers and an anonymous function which returns their added value.
@@ -59,15 +58,10 @@ function doStuff(arg1, arg2, callback) {
   callback(arg1, arg2)
 }
 
-
 // ============ YOUR WORK HERE ===========
-
-
-
-
+doStuff(1,2,(number1,number2) => number1 + number2)
 
 //  ============== END WORK ==============
-
 
 // 4. Write the below function in ES6 syntax
 
@@ -78,19 +72,25 @@ function whoChanging() {
   var bool = true
   var incrementer = 2
   while (bool) {
-
     if (counter = 20) {
       bool = false
     }
-
     counter+=incrementer
   }
 }
 
 // ============ YOUR WORK HERE ===========
-
-
-
+whoChanging = () => {
+  let counter = 0;
+  let bool = true
+  const incrementer = 2
+  while (bool) {
+    if (counter = 20) {
+      bool = false
+    }
+    counter+=incrementer
+  }
+}
 
 
 //  ============== END WORK ==============
@@ -102,3 +102,7 @@ function madLibs(occupation, transportVerb, adverb, adjective, animal, presentTe
 }
 
 // Have fun making your own test on this one 😈.
+
+madLibs = (occupation, transportVerb, adverb, adjective, animal, presentTenseVerb, adjective2) => {
+  `The ${occupation} ${transportVerb} on his/her way to the church very ${adverb}. The surrounding crowd could not believe he/she would do so on such a/an ${adjective} day. Meanwhile, across the street, an ${animal} was ${presentTenseVerb}. It was truly a/an ${adjective2} sight to see.`
+}

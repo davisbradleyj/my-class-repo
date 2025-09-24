@@ -12,7 +12,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "glob": "^7.1.4",
-    "mongoose": "^5.5.8"
+    "mongoose": "^6.13.6"
   },
   "devDependencies": {
     "sw-precache-webpack-plugin": "^0.11.5",

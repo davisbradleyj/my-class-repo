@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "cli-table": "^0.3.1",
-    "inquirer": "^5.2.0",
+    "inquirer": "^12.9.6",
     "mysql": "^2.15.0"
   },
   "devDependencies": {},

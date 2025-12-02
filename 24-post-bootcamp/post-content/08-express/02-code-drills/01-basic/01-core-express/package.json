@@ -4,7 +4,7 @@
   "description": "## How many times have we been here?",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.22.0"
   },
   "devDependencies": {},
   "scripts": {

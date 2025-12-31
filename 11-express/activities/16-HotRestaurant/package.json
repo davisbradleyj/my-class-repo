@@ -4,7 +4,7 @@
   "description": "restaurant reservation app",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.22.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

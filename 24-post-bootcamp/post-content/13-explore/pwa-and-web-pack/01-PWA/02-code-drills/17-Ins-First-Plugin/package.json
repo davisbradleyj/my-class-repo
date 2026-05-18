@@ -16,7 +16,7 @@
 		"webpack": "^4.32.0",
 		"webpack-bundle-analyzer": "^3.3.2",
 		"webpack-cli": "^3.3.2",
-		"webpack-dev-server": "^3.4.1"
+		"webpack-dev-server": "^5.2.4"
 	},
 	"dependencies": {
 		"chart.js": "^2.8.0"

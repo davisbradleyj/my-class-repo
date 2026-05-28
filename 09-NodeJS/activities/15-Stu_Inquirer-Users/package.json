@@ -13,6 +13,6 @@
   "author": "RH, BD",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^7.1.0"
+    "inquirer": "^14.0.0"
   }
 }

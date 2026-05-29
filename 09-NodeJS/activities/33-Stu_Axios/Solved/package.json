@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.15.0",
-    "inquirer": "^6.5.0"
+    "inquirer": "^14.0.0"
   }
 }

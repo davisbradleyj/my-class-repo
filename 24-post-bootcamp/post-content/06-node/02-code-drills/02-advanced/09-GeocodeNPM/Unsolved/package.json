@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-geocoder": "^3.22.0"
+    "node-geocoder": "^4.4.1"
   }
 }
